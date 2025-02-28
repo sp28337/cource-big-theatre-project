@@ -1,0 +1,17 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.footer__contacts-list {
+    @include mixins.font-mixin(21px, 28px);
+    text-transform: uppercase;
+}
+
+.footer__hr {
+    opacity: 30%;
+}
+
+.footer__author-desc {
+    font-family: variables.$font-family;
+    @include mixins.font-mixin(12px, 18px, 400);
+    opacity: 30%;
+}

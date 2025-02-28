@@ -1,0 +1,25 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.popup__label {
+    font-family: variables.$font-family;
+    @include mixins.font-mixin(14px, 21px, 600);
+    color: variables.$gray;
+}
+
+.popup__input-field {
+    background-color: #616161;
+}
+
+.popup__hint {
+    @include mixins.font-mixin(14px, 21px, 400);
+    color: variables.$gray;
+}
+
+.button {
+    font-family: variables.$font-family-condensed;
+    color: #FFF;
+    background: variables.$gold;
+    text-transform: uppercase;
+    @include mixins.font-mixin(18px, 25px);
+}

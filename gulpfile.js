@@ -4,7 +4,7 @@ const browserSync = require("browser-sync").create();
 
 gulp.task("css", function () {
     return gulp.src("./scss/style.scss")
-        .pipe(sass())
+        .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest("./css"));
 })
 
@@ -21,3 +21,6 @@ gulp.task("reload", function (done) {
 });
 
 gulp.watch("scss/**/*.{scss, sass}", gulp.series("css", "reload"));
+gulp.watch("*.html", gulp.series("reload"));
+
+gulp.task("start", gulp.series("css", "server"));

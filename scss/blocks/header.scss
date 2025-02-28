@@ -1,0 +1,34 @@
+@use "../mixins";
+@use "../variables";
+
+.header {
+    // &__tel {
+    //     color: rgb(241, 9, 225);
+        
+    //     &:hover {
+    //         color: rgb(54, 225, 180);
+    //     }
+    // }  
+
+    .header__nav-link {
+      text-transform: uppercase;
+      @include mixins.font-mixin(17px, 25px);
+    }
+
+    .header__tel {
+      @include mixins.font-mixin($line-height-param: 22px);
+    }
+
+    .header__title {
+      text-transform: uppercase;
+      @include mixins.font-mixin(64px, 87px);
+      letter-spacing: 0.1em;
+    }
+
+    .header__desc {
+      font-family: variables.$font-family;
+      @include mixins.font-mixin(14px, 21px, 400);
+    }
+    
+
+}

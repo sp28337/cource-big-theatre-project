@@ -1,0 +1,30 @@
+@use "variables";
+@use "mixins";
+
+body {
+    font-family: variables.$font-family-condensed;
+    background-color: variables.$dark-gray;
+    color: #FFF;
+    @include mixins.font-mixin();
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn {
+    background: variables.$gold;
+    text-transform: uppercase;
+    @include mixins.font-mixin(18px, 25px);
+}
+
+.section-title {
+    text-transform: uppercase;
+    @include mixins.font-mixin(48px, 65px, 300);
+    letter-spacing: 0.1em;
+};
+
+.section-title-orange {
+    color: variables.$gold;
+};
