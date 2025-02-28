@@ -1,0 +1,23 @@
+@use "../mixins";
+@use "../variables";
+
+.about {
+    .about__subtitle {
+        text-transform: uppercase;
+        @include mixins.font-mixin(21px, 28px);
+    }
+
+    .about__desc {
+        font-family: variables.$font-family;
+        @include mixins.font-mixin(16px, 24px, 400);
+    }
+
+    // .about__subtitle {
+    //     text-transform: uppercase;
+    //     @include mixins.font-mixin(21px, 26px);
+    // }
+
+    .digits__desc-orange {
+        color: orange;
+    }
+};

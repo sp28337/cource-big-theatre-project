@@ -1,0 +1,6 @@
+@use "../mixins";
+
+.staging__list {
+    @include mixins.font-mixin(24px, 32px);
+    text-transform: uppercase;
+}
