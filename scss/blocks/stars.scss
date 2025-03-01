@@ -1,12 +1,17 @@
 @use "variables";
 @use "mixins";
 
-.stars__year-list {
-    @include mixins.font-mixin(72px, 98px);
-    color: variables.$gold;
-}
+.stars {
 
-.stars__title {
-    font-family: variables.$font-family;
-    @include mixins.font-mixin(36px, 54px);
+    background-image: url("../../dist/img/stars.webp");
+
+    .stars__year-item {
+        @include mixins.font-mixin(72px, 98px);
+        color: variables.$gold;
+    }
+
+    .stars__title {
+        font-family: variables.$font-family;
+        @include mixins.font-mixin(36px, 54px);
+    }
 }

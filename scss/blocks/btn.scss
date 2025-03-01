@@ -1,0 +1,15 @@
+@use "../variables";
+@use "../mixins";
+
+.btn {
+    background: variables.$gold;
+    text-transform: uppercase;
+    width: 359px;
+    min-height: 72px;
+    font-family: variables.$font-family-condensed;
+    color: inherit;
+    border: none;
+
+    @include mixins.font-mixin(18px, 25px);
+    @include mixins.flex-center();
+}

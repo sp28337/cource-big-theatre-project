@@ -21,9 +21,9 @@
         <h1 class="header__title">Большой театр</h1>
         <p class="header__desc">Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</p>
         <a href="#" class="header__link-poster btn">афиша</a>
-        <img src="dist/img/first-screen-item.webp" alt="Big theatre">
-        <button type="button">Prev</button>
-        <button type="button">Next</button>
+        <img src="dist/img/header-slider-1.webp" alt="Big theatre">
+        <button type="button" class="header__btn">пред</button>
+        <button type="button" class="header__btn">след</button>
     </header>
     
     <main>
@@ -43,7 +43,7 @@
                             <p class="digits__desc"><span class="digits__desc-orange">350</span> лет истории</p>
                         </li>
                     </ul></div>
-                <img src="" alt="photo">
+                <img src="dist/img/about-theatre.webp" alt="photo">
             </div>
         </section>
         
@@ -51,11 +51,11 @@
             <h2 class="staging__title section-title"><span class="section-title-orange">наши</span> постановки</h2>
             <div class="staging__list">
                 <div class="staging__item">
-                    <h3 class="staging__item-title">ОСКАР 2020</h3></div>
+                    <h3 class="staging__item-title staging__item-title--building">ОСКАР 2020</h3></div>
                 <div class="staging__item">
-                    <h3 class="staging__item-title">золотой грамофон</h3></div>
+                    <h3 class="staging__item-title staging__item-title--border">золотой грамофон</h3></div>
                 <div class="staging__item">
-                    <h3 class="staging__item-title">золотой грамофон</h3></div>
+                    <h3 class="staging__item-title staging__item-title--hall">золотой грамофон</h3></div>
             </div>
         </section>
 
@@ -66,7 +66,7 @@
                 <li class="stars__year-item">2020</li>
             </ul>
             <div class="stars__img">
-                <img src="" alt="star">
+                <img src="../img/star.svg" alt="star">
                 <img src="" alt="star">
                 <img src="" alt="star">
                 <img src="" alt="star">
@@ -81,16 +81,16 @@
             <div class="partners__wrp">
                 <ul class="partners__list">http://localhost:3002/
                     <li class="partners__item">
-                        <img src="img/partners/1.png" alt="partner">
+                        <img src="../img/logo.png" alt="partner">
                     </li>
                     <li class="partners__item">
-                        <img src="img/partners/2.png" alt="partner">
+                        <img src="../img/logo.png" alt="partner">
                     </li>
                     <li class="partners__item">
-                        <img src="img/partners/3.png" alt="partner">
+                        <img src="../img/logo.png" alt="partner">
                     </li>
                     <li class="partners__item">
-                        <img src="img/partners/4.png" alt="partner">
+                        <img src="../img/logo.png" alt="partner">
                     </li>
                 </ul>
             </div>
@@ -117,31 +117,29 @@
         
         <hr class="footer__hr">
         <div class="footer__author-desc">
-            <p class="footer__author-desc-content">(с) Все права защищены. Большой театр. 2020</p>
-            <a class="footer__author-desc-link">Разработано d-e-n.ru</a>
+            <p class="footer__author-desc">(с) Все права защищены. Большой театр. 2020</p>
+            <a class="footer__author-desc footer__author-desc--link">Разработано d-e-n.ru</a>
         </div>
     </footer>
 
     <div class="popup">
-        <button class="popup__close-btn" type="button">X</button>
+        <button class="popup__close-btn" type="button">
+            <img src="./img/x.svg" alt="close">
+        </button>
         <form class="popup__form" action="#">
             <label class="popup__label">
-                <span>Name</span>
-                <input class="popup__input-field" type="text" placeholder="Name">
+                <input class="popup__input-field" type="text" placeholder="имя">
             </label>
             <label class="popup__label">
-                <span>Company</span>
-                <input class="popup__input-field" type="text" placeholder="Company">
+                <input class="popup__input-field" type="text" placeholder="компания">
             </label>
             <label class="popup__label">
-                <span>Phone</span>
-                <input class="popup__input-field" type="tel" placeholder="Phone">
+                <input class="popup__input-field" type="tel" placeholder="телефон">
             </label>
             <label class="popup__label">
-                <span>Email</span>
-                <input class="popup__input-field" type="email" placeholder="Email">
+                <input class="popup__input-field" type="email" placeholder="e-mail">
             </label>
-            <textarea class="popup__input-field popup__input-field--textarea" placeholder="Message"></textarea>
+            <textarea class="popup__input-field popup__input-field--textarea" placeholder="сообщение"></textarea>
             <p class="popup__hint">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
             <button class="popup__button button">отправить</button>
         </form>

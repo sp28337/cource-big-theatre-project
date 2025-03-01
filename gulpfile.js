@@ -64,10 +64,10 @@ function webpTask() {
         .pipe(dest("dist/img"));
 }
 
-watch("scss/**//*.{scss, sass}", series(css, reload));
-watch("*.html", reload);
-
 exports.css = css;
 exports.server = server;
 exports.webpTask = webpTask;
 exports.start = series(css, server);
+
+watch("scss/**/*.{scss, sass}", series(css, reload));
+watch("*.html", reload);

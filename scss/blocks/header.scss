@@ -2,13 +2,8 @@
 @use "../variables";
 
 .header {
-    // &__tel {
-    //     color: rgb(241, 9, 225);
-        
-    //     &:hover {
-    //         color: rgb(54, 225, 180);
-    //     }
-    // }  
+    background-image: url("../../dist/img/header-background.webp");
+    background-color: variables.$gray-background;
 
     .header__nav-link {
       text-transform: uppercase;
@@ -21,8 +16,9 @@
 
     .header__title {
       text-transform: uppercase;
-      @include mixins.font-mixin(64px, 87px);
       letter-spacing: 0.1em;
+     
+      @include mixins.font-mixin(64px, 87px);
     }
 
     .header__desc {
@@ -30,5 +26,14 @@
       @include mixins.font-mixin(14px, 21px, 400);
     }
     
+    .header__btn {
+      text-transform: uppercase;
+      color: inherit;
+      padding: 0;
+      border: none;
+      background: transparent;
 
+      @include mixins.font-mixin(18px, 24px);
+  }
+  
 }
