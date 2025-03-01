@@ -13,10 +13,8 @@ a {
     text-decoration: none;
 }
 
-.btn {
-    background: variables.$gold;
-    text-transform: uppercase;
-    @include mixins.font-mixin(18px, 25px);
+textarea {
+    resize: none;
 }
 
 .section-title {

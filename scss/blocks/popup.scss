@@ -1,25 +1,55 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
-.popup__label {
-    font-family: variables.$font-family;
-    @include mixins.font-mixin(14px, 21px, 600);
-    color: variables.$gray;
-}
 
-.popup__input-field {
-    background-color: #616161;
-}
+.popup {
 
-.popup__hint {
-    @include mixins.font-mixin(14px, 21px, 400);
-    color: variables.$gray;
-}
+    input::placeholder,
+    textarea::placeholder {
+        font-family: variables.$font-family;
+        color: variables.$gray;
+    }
 
-.button {
-    font-family: variables.$font-family-condensed;
-    color: #FFF;
-    background: variables.$gold;
-    text-transform: uppercase;
-    @include mixins.font-mixin(18px, 25px);
+    .popup__close-btn {
+        background: transparent;
+        border: none;
+    }
+
+    .popup__label {
+        font-family: variables.$font-family;
+        @include mixins.font-mixin(14px, 21px, 600);
+        color: variables.$gray;
+    }
+
+    .popup__input-field {
+        text-transform: capitalize;
+        background-color: variables.$gray-popup-input;
+        width: 180px;
+        min-height: 39px;
+        border: 1px solid variables.$gray-popup;
+    }
+
+    .popup__input-field--textarea {
+        width: 360px;
+        min-height: 112px;
+    }
+
+    .popup__hint {
+        color: variables.$gray;
+        font-family: variables.$font-family;
+
+        @include mixins.font-mixin(14px, 21px, 400);
+    }
+
+    .button {
+        font-family: variables.$font-family-condensed;
+        color: variables.$white;
+        background: variables.$gold;
+        text-transform: uppercase;
+        width: 190px;
+        min-height: 51px;
+        border: none;
+
+        @include mixins.font-mixin(18px, 25px);
+    }
 }

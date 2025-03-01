@@ -5,6 +5,7 @@
   "scripts": {
     "test": "no tests",
     "css": "gulp css",
+    "webpTask": "gulp webpTask",
     "start": "gulp start",
     "server": "gulp server"
   },
@@ -21,8 +22,9 @@
   "description": "",
   "devDependencies": {
     "browser-sync": "^3.0.3",
-    "gulp": "^5.0.0",
+    "gulp": "^4.0.2",
     "gulp-sass": "^6.0.0",
+    "gulp-webp": "^4.0.1",
     "sass": "^1.85.1"
   }
 }

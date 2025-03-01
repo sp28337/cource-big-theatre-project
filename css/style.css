@@ -1,3 +1,7 @@
+.header {
+  background-image: url("../../dist/img/header-background.webp");
+  background-color: #808080;
+}
 .header .header__nav-link {
   text-transform: uppercase;
   font-size: 17px;
@@ -11,16 +15,26 @@
 }
 .header .header__title {
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   font-size: 64px;
   line-height: 87px;
   font-weight: 700;
-  letter-spacing: 0.1em;
 }
 .header .header__desc {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+}
+.header .header__btn {
+  text-transform: uppercase;
+  color: inherit;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .about .about__subtitle {
@@ -35,82 +49,128 @@
   line-height: 24px;
   font-weight: 400;
 }
-.about .digits__desc-orange {
-  color: orange;
-}
 
-.partners__btn {
+.footer .footer__contacts-item-desc {
   font-family: "Open Sans Condensed", sans-serif;
-  color: #FFF;
-}
-
-.footer__contacts-list {
+  text-transform: uppercase;
+  font-style: normal;
   font-size: 21px;
   line-height: 28px;
   font-weight: 700;
-  text-transform: uppercase;
 }
-
-.footer__hr {
-  opacity: 30%;
+.footer .footer__hr {
+  color: #565656;
 }
-
-.footer__author-desc {
+.footer .footer__author-desc {
   font-family: "Open Sans", sans-serif;
+  color: #989898;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  opacity: 30%;
 }
 
-.popup__label {
+.btn {
+  background: #D1A954;
+  text-transform: uppercase;
+  width: 359px;
+  min-height: 72px;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: inherit;
+  border: none;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup input::placeholder,
+.popup textarea::placeholder {
+  font-family: "Open Sans", sans-serif;
+  color: #989898;
+}
+.popup .popup__close-btn {
+  background: transparent;
+  border: none;
+}
+.popup .popup__label {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
   color: #989898;
 }
-
-.popup__input-field {
-  background-color: #616161;
+.popup .popup__input-field {
+  text-transform: capitalize;
+  background-color: #444444;
+  width: 180px;
+  min-height: 39px;
+  border: 1px solid #616161;
 }
-
-.popup__hint {
+.popup .popup__input-field--textarea {
+  width: 360px;
+  min-height: 112px;
+}
+.popup .popup__hint {
+  color: #989898;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #989898;
 }
-
-.button {
+.popup .button {
   font-family: "Open Sans Condensed", sans-serif;
-  color: #FFF;
+  color: #FFFFFF;
   background: #D1A954;
   text-transform: uppercase;
+  width: 190px;
+  min-height: 51px;
+  border: none;
   font-size: 18px;
   line-height: 25px;
   font-weight: 700;
 }
 
-.staging__list {
+.staging .staging__item-title {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
   text-transform: uppercase;
 }
+.staging .staging__item-title {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.staging .staging__item-title--building {
+  background-image: url("../../dist/img/staging1.webp");
+}
+.staging .staging__item-title--border {
+  background-image: url("../../dist/img/staging2.webp");
+}
+.staging .staging__item-title--hall {
+  background-image: url("../../dist/img/staging3.webp");
+}
 
-.stars__year-list {
+.stars {
+  background-image: url("../../dist/img/stars.webp");
+}
+.stars .stars__year-item {
   font-size: 72px;
   line-height: 98px;
   font-weight: 700;
   color: #D1A954;
 }
-
-.stars__title {
+.stars .stars__title {
   font-family: "Open Sans", sans-serif;
   font-size: 36px;
   line-height: 54px;
   font-weight: 700;
+}
+
+.digits__desc-orange {
+  color: orange;
 }
 
 @font-face {
@@ -142,12 +202,8 @@ a {
   text-decoration: none;
 }
 
-.btn {
-  background: #D1A954;
-  text-transform: uppercase;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 700;
+textarea {
+  resize: none;
 }
 
 .section-title {
