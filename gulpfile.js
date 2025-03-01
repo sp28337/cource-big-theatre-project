@@ -38,6 +38,7 @@ gulp.task("start", gulp.series("css", "server"));
 
 const { series, dest, watch, src } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const webp = require('gulp-webp');
 const browserSync = require('browser-sync').create();
 
 function css() {
@@ -58,8 +59,8 @@ function reload(cb) {
 }
 
 function webpTask() {
-    return src("img/*.{png, jpg, jpeg}")
-        .pipe(webp)
+    return src("img/*.{png,jpg,jpeg}")
+        .pipe(webp())
         .pipe(dest("dest"));
 }
 
