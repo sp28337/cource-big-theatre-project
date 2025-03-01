@@ -61,11 +61,11 @@ function reload(cb) {
 function webpTask() {
     return src("img/*.{png,jpg,jpeg}")
         .pipe(webp())
-        .pipe(dest("dest"));
+        .pipe(dest("dist/img"));
 }
 
 watch("scss/**//*.{scss, sass}", series(css, reload));
-watch("*.html", series(reload));
+watch("*.html", reload);
 
 exports.css = css;
 exports.server = server;
