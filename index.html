@@ -8,33 +8,49 @@
 </head>
 <body>
 
+
     <header class="header">
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="header__nav-link">Главная</a></li>
-                <li class="header__nav-item"><a class="header__nav-link" href="#">О театре</a></li>
-                <li class="header__nav-item"><a class="header__nav-link" href="#">Наши постановки</a></li>
-                <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
-            </ul>
-        </nav>
-        <a class="header__tel" href="tel:+7(999)999-99-99">+7(999)999-99-99</a>
-        <h1 class="header__title">Большой театр</h1>
-        <p class="header__desc">Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</p>
-        <a href="#" class="header__link-poster btn">афиша</a>
-        <img src="dist/img/header-slider-1.webp" alt="Big theatre">
-        <button type="button" class="header__btn">пред</button>
-        <button type="button" class="header__btn">след</button>
+        <div class="container">
+            <div class="header__nav-wrp">
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a class="header__nav-link">Главная</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="#">О театре</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="#">Наши постановки</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a class="header__tel" href="tel:+7(999)999-99-99">+7(999)999-99-99</a>
+            </div>
+            <div class="header__content">
+                <div class="header__content-wrp">
+                    <h1 class="header__title">Большой театр</h1>
+                    <p class="header__desc">Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</p>
+                    <a href="#" class="header__link-poster btn">афиша</a>
+                </div>
+                <div>
+                    <img class="header__slider-img" src="dist/img/header-slider-1.webp" alt="Big theatre">
+                    <div class="header__btn-wrp">
+                        <button type="button" class="header__btn">пред</button>
+                        <button type="button" class="header__btn">след</button>
+                    </div>
+                </div>    
+            </div>
+        </div>
     </header>
-    
+
+
+
     <main>
-        <section class="about">
+        <section class="about container">
             <h2 class="about__title section-title"><span class="section-title-orange">o</span> театре</h2>
             <div class="about__wrp">
-                <div class="about__item">
+                <div class="about__item-content">
                     <h3 class="about__subtitle">Самый лучший театр в СПБ</h3>
-                    <p class="about__desc">Как свидетельствуют архивные документы, первое каменное здание Большого театра начали возводить в 1775 году по проекту Антонио Ринальди. В дальнейшем, после того как Ринальди упал с лесов и не мог лично наблюдать за ходом работ, Екатерина II поручила немецкому театральному декоратору и архитектору Людвигу Филиппу Тишбейну создать новый проект театра, который и был воплощён архитекторами Ф. В. фон Бауром и М. А. Деденёвым. Открытие его состоялось в 1783 году, хотя, основываясь на других свидетельствах, годом открытия можно считать 1784 год.</p></div>
-                <div class="about__item">
-                    <h3 class="about__subtitle">немного о цифрах</h3>
+                    <p class="about__desc">Как свидетельствуют архивные документы, первое каменное здание Большого театра начали возводить в 1775 году по проекту Антонио Ринальди. В дальнейшем, после того как Ринальди упал с лесов и не мог лично наблюдать за ходом работ, Екатерина II поручила немецкому театральному декоратору и архитектору Людвигу Филиппу Тишбейну создать новый проект театра, который и был воплощён архитекторами Ф. В. фон Бауром и М. А. Деденёвым. Открытие его состоялось в 1783 году, хотя, основываясь на других свидетельствах, годом открытия можно считать 1784 год.</p>
+                </div>
+                <div class="about__item-digits">
+                    <h3 class="about__subtitle about__subtitle--digits">немного о цифрах</h3>
                     <ul class="about__digits digits">
                         <li class="digits__item">
                             <p class="digits__desc"><span class="digits__desc-orange">1600</span>посадочных мест</p>
@@ -42,44 +58,52 @@
                         <li class="digits__item">
                             <p class="digits__desc"><span class="digits__desc-orange">350</span> лет истории</p>
                         </li>
-                    </ul></div>
-                <img src="dist/img/about-theatre.webp" alt="photo">
+                    </ul>
+                </div>
+                <img class="about__img" src="dist/img/about-theatre.webp" alt="photo">
             </div>
         </section>
         
-        <section class="staging">
+
+        <section class="staging container">
             <h2 class="staging__title section-title"><span class="section-title-orange">наши</span> постановки</h2>
             <div class="staging__list">
-                <div class="staging__item">
-                    <h3 class="staging__item-title staging__item-title--building">ОСКАР 2020</h3></div>
-                <div class="staging__item">
-                    <h3 class="staging__item-title staging__item-title--border">золотой грамофон</h3></div>
-                <div class="staging__item">
-                    <h3 class="staging__item-title staging__item-title--hall">золотой грамофон</h3></div>
+                <div class="staging__item staging__item--building">
+                    <h3 class="staging__item-title staging__item-title--oskar">ОСКАР<br>2020</h3></div>
+                <div class="staging__item staging__item--border">
+                    <h3 class="staging__item-title staging__item-title--gramofon1">золотой<br>грамофон</h3></div>
+                <div class="staging__item staging__item--hall">
+                    <h3 class="staging__item-title staging__item-title--gramofon2">золотой<br>грамофон</h3></div>
             </div>
         </section>
 
-        <section class="stars">
-            <ul class="stars__year-list">
-                <li class="stars__year-item">2018</li>
-                <li class="stars__year-item">2019</li>
-                <li class="stars__year-item">2020</li>
-            </ul>
-            <div class="stars__img">
-                <img src="../img/star.svg" alt="star">
-                <img src="" alt="star">
-                <img src="" alt="star">
-                <img src="" alt="star">
-                <img src="" alt="star">
+
+        <section class="stars container">
+            <div class="stars__wrp">
+                <ul class="stars__year-list">
+                    <li class="stars__year-item">2018</li>
+                    <li class="stars__year-item">2019</li>
+                    <li class="stars__year-item">2020</li>
+                </ul>
+                <div class="stars__contetnt-wrp">
+                    <div class="stars__img">
+                        <img src="../img/star.svg" alt="star">
+                        <img src="../img/star.svg" alt="star">
+                        <img src="../img/star.svg" alt="star">
+                        <img src="../img/star.svg" alt="star">
+                        <img src="../img/star.svg" alt="star">
+                    </div>
+                    
+                    <h2 class="stars__title">Лучший театр <span class="stars__title-line">по мнению театральных </span>критиков Парижа</h2>
+                </div>
             </div>
-            <h2 class="stars__title">Лучший театр
-                по мнению театральных критиков Парижа</h2>
         </section>
             
-        <section class="partners">
+
+        <section class="partners container">
             <h2 class="partners__title section-title"><span class="section-title-orange">партнеры</span> театра</h2>
             <div class="partners__wrp">
-                <ul class="partners__list">http://localhost:3002/
+                <ul class="partners__list">
                     <li class="partners__item">
                         <img src="../img/logo.png" alt="partner">
                     </li>
@@ -94,54 +118,71 @@
                     </li>
                 </ul>
             </div>
-            <button class="partners__btn btn">Стать меценатом</button>
+            <div class="partners__btn-wrp">
+                <button class="partners__btn btn">Стать меценатом</button>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <h2 class="footer__title section-title"><span class="section-title-orange">контакты</span></h2>
-        <ul class="footer__contacts-list">
-            <li>
-                <a class="footer__contacts-item-desc" href="tel:+78121234555">+7 (812) 123-45-55</a>
-            </li>
-            <li>
-                <a class="footer__contacts-item-desc" href="tel:+78121234566">+7 (812) 123-45-66</a>
-            </li>
-            <li>
-                <a class="footer__contacts-item-desc" href="mailto:info@theater.ru">info@theater.ru</a>
-            </li>
-            <li>
-                <address class="footer__contacts-item-desc">г. санкт-петербург, невский 140</address>
-            </li>
-        </ul>
+
+
+    <footer class="footer container">
+        <div class="footer__contacts-wrp">
+            <h2 class="footer__title section-title"><span class="section-title-orange">контакты</span></h2>
+            <ul class="footer__contacts-list">
+                <li class="footer__contacts-item">
+                    <a class="footer__contacts-item-desc" href="tel:+78121234555">+7 (812) 123-45-55</a>
+                </li>
+                <li class="footer__contacts-item">
+                    <a class="footer__contacts-item-desc" href="tel:+78121234566">+7 (812) 123-45-66</a>
+                </li>
+                <li class="footer__contacts-item">
+                    <a class="footer__contacts-item-desc" href="mailto:info@theater.ru">info@theater.ru</a>
+                </li>
+                <li class="footer__contacts-item">
+                    <address class="footer__contacts-item-desc">г. санкт-петербург, невский 140</address>
+                </li>
+            </ul>
+        </div>
         
-        <hr class="footer__hr">
+        <!-- <hr class="footer__hr"> -->
         <div class="footer__author-desc">
-            <p class="footer__author-desc">(с) Все права защищены. Большой театр. 2020</p>
-            <a class="footer__author-desc footer__author-desc--link">Разработано d-e-n.ru</a>
+            <p class="footer__author-desc-para">(с) Все права защищены. Большой театр. 2020</p>
+            <a class="footer__author-desc-link footer__author-desc-link--link">Разработано d-e-n.ru</a>
         </div>
     </footer>
+
 
     <div class="popup">
         <button class="popup__close-btn" type="button">
             <img src="./img/x.svg" alt="close">
         </button>
         <form class="popup__form" action="#">
-            <label class="popup__label">
-                <input class="popup__input-field" type="text" placeholder="имя">
-            </label>
-            <label class="popup__label">
-                <input class="popup__input-field" type="text" placeholder="компания">
-            </label>
-            <label class="popup__label">
-                <input class="popup__input-field" type="tel" placeholder="телефон">
-            </label>
-            <label class="popup__label">
-                <input class="popup__input-field" type="email" placeholder="e-mail">
-            </label>
-            <textarea class="popup__input-field popup__input-field--textarea" placeholder="сообщение"></textarea>
-            <p class="popup__hint">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
-            <button class="popup__button button">отправить</button>
+            <div class="popup__form-wrp">
+                <div class="popup__form-name-tel-wrp">
+                    <label class="popup__label">
+                        <input class="popup__input-field" type="text" placeholder="имя">
+                    </label>
+                    <label class="popup__label">
+                        <input class="popup__input-field" type="tel" placeholder="телефон">
+                    </label>
+                </div>
+                <div class="popup__form-comp-email-wrp">
+                    <label class="popup__label">
+                        <input class="popup__input-field" type="text" placeholder="компания">
+                    </label>
+                    <label class="popup__label">
+                        <input class="popup__input-field" type="email" placeholder="e-mail">
+                    </label>
+                </div>
+                <textarea class="popup__input-field popup__input-field--textarea" placeholder="сообщение"></textarea>
+            </div>
+            
+            <div class="popup__form-par-button-wrp">
+                <p class="popup__hint">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
+                <button class="popup__button button">отправить</button>
+            </div>
+            
         </form>
     </div>
 

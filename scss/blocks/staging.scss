@@ -1,16 +1,22 @@
 @use "../mixins";
 
 .staging {
-    .staging__item-title {
-        @include mixins.font-mixin(24px, 32px);
-        text-transform: uppercase;
+
+    padding: 119px 0 0;
+
+    .section-title {
+        text-align: center;
     }
 
-    .staging__item-title {
+    .staging__list {
+        margin: 113px 0 0;
+        @include mixins.flex-center();
+    }
 
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+    .staging__item {
+        display: flex;
+        width: 370px;
+        height: 478px;
 
         &--building {
             background-image: url("../../dist/img/staging1.webp");
@@ -23,5 +29,30 @@
         &--hall {
             background-image: url("../../dist/img/staging3.webp");
         }
+    }
+
+    .staging__item-title {
+        text-transform: uppercase;
+
+        @include mixins.font-mixin(24px, 32px);
+
+        &--oskar {
+            margin: 34px 0 0 33px;
+        }
+
+        &--gramofon1 {
+            margin: 37px 0 0 57px;
+        }
+
+        &--gramofon2 {
+            margin: 34px 0 0 33px;
+        }
+    }
+
+    .staging__item-title {
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 }

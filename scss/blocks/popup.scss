@@ -3,6 +3,11 @@
 
 
 .popup {
+    width: 865px;
+    height: 399px;
+    margin: 0 auto;
+
+    background-color: #2C2C2C;
 
     input::placeholder,
     textarea::placeholder {
@@ -15,41 +20,83 @@
         border: none;
     }
 
-    .popup__label {
-        font-family: variables.$font-family;
-        @include mixins.font-mixin(14px, 21px, 600);
-        color: variables.$gray;
-    }
+    .popup__form {
+        
+        padding: 93px 63px 0 72px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
 
-    .popup__input-field {
-        text-transform: capitalize;
-        background-color: variables.$gray-popup-input;
-        width: 180px;
-        min-height: 39px;
-        border: 1px solid variables.$gray-popup;
-    }
+        .popup__form-wrp {
 
-    .popup__input-field--textarea {
-        width: 360px;
-        min-height: 112px;
-    }
+            display: flex;
+            text-align: center;
+            
+            .popup__form-name-tel-wrp {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
-    .popup__hint {
-        color: variables.$gray;
-        font-family: variables.$font-family;
+            }
 
-        @include mixins.font-mixin(14px, 21px, 400);
-    }
+            .popup__form-comp-email-wrp {
+                margin-left: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
-    .button {
-        font-family: variables.$font-family-condensed;
-        color: variables.$white;
-        background: variables.$gold;
-        text-transform: uppercase;
-        width: 190px;
-        min-height: 51px;
-        border: none;
+            }
+            
+            .popup__label {
+                font-family: variables.$font-family;
+                @include mixins.font-mixin(14px, 21px, 600);
+                color: variables.$gray;
+            }
 
-        @include mixins.font-mixin(18px, 25px);
+            .popup__input-field {
+                text-transform: capitalize;
+                background-color: variables.$gray-popup-input;
+                width: 180px;
+                min-height: 39px;
+                border: 1px solid variables.$gray-popup;
+            }
+
+            .popup__input-field--textarea {
+                width: 360px;
+                min-height: 112px;
+                margin-left: 30px;
+            }
+
+        }
+
+
+        .popup__form-par-button-wrp {
+
+            display: flex;
+            justify-content: space-between;
+            padding-top: 21px;
+            
+            .popup__hint {
+                color: variables.$gray;
+                font-family: variables.$font-family;
+                width: 390px;
+                text-align: left;
+
+                @include mixins.font-mixin(14px, 21px, 400);
+            }
+
+            .button {
+                font-family: variables.$font-family-condensed;
+                color: variables.$white;
+                background: variables.$gold;
+                text-transform: uppercase;
+                width: 190px;
+                height: 51px;
+                min-height: 51px;
+                border: none;
+
+                @include mixins.font-mixin(18px, 25px);
+            }
+        }
     }
 }
