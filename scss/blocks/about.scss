@@ -2,19 +2,48 @@
 @use "../variables";
 
 .about {
+
+    padding: 150px 0 0;
+
+    .about__title {
+        margin: 0 0 100px;
+    }
+
+    .about__wrp {
+        @include mixins.flex-space-between();
+    }
+
+    .about__item-content {
+        width: 449px;
+    }
+
+    .about__item-digits {
+        width: 225px;
+    }
+
+    .about__img {
+        width: 369px;
+        height: 323px;
+    }
+
     .about__subtitle {
+        margin: 0 0 18px;
         text-transform: uppercase;
+        
         @include mixins.font-mixin(21px, 28px);
+    }
+   
+    .about__subtitle--digits{
+        margin: 0 0 60px;
     }
 
     .about__desc {
         font-family: variables.$font-family;
+        
         @include mixins.font-mixin(16px, 24px, 400);
     }
 
-    // .about__subtitle {
-    //     text-transform: uppercase;
-    //     @include mixins.font-mixin(21px, 26px);
-    // }
-
+    .section-title {
+        text-align: center;
+    }
 };

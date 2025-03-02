@@ -3,10 +3,37 @@
 
 .header {
     background-image: url("../../dist/img/header-background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: variables.$gray-background;
+    padding: 50px 0  179px;
+    
+    .header__nav-wrp {
+      margin: 0 0 219px;
+
+      @include mixins.flex-space-between();
+    }
+
+    .header__nav-item:nth-of-type(n+2) {
+      margin-left: 63px;
+    }
+
+    .header__nav-list {
+      display: flex;
+    }
+
+    .header__content {
+      @include mixins.flex-space-between();
+    }
+
+    .header__content-wrp {
+      padding: 88px 0 0;
+      max-width: 540px;
+    }
 
     .header__nav-link {
       text-transform: uppercase;
+    
       @include mixins.font-mixin(17px, 25px);
     }
 
@@ -17,15 +44,28 @@
     .header__title {
       text-transform: uppercase;
       letter-spacing: 0.1em;
+      margin: 0 0 50px;
      
       @include mixins.font-mixin(64px, 87px);
     }
 
     .header__desc {
       font-family: variables.$font-family;
+      margin: 0 0 50px;
+     
       @include mixins.font-mixin(14px, 21px, 400);
     }
     
+    .header__slider-img {
+      width: 370px;
+      height: 570px;
+      margin: 0 0 36px;
+    }
+
+    .header__btn-wrp {
+      @include mixins.flex-space-between();
+    }
+
     .header__btn {
       text-transform: uppercase;
       color: inherit;
@@ -35,5 +75,4 @@
 
       @include mixins.font-mixin(18px, 24px);
   }
-  
 }

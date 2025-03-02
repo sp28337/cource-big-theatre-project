@@ -3,15 +3,46 @@
 
 .stars {
 
-    background-image: url("../../dist/img/stars.webp");
+    padding: 209px 25px;
+    
+    
+    .stars__wrp {
+        background-image: url("../../dist/img/stars.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 126px 190px;
 
-    .stars__year-item {
-        @include mixins.font-mixin(72px, 98px);
-        color: variables.$gold;
-    }
+        @include mixins.flex-space-between();
+        
+        .stars__year-list {
 
-    .stars__title {
-        font-family: variables.$font-family;
-        @include mixins.font-mixin(36px, 54px);
+            .stars__year-item {
+                color: variables.$gold;
+                margin: 0 0 20px;
+
+                @include mixins.font-mixin(72px, 72px);
+            }
+        
+        .stars__contetnt-wrp {
+            width: 540px;
+
+            .stars__img {
+                padding: 7px 0 0 0;
+                margin: 0 0 31px;
+                }
+            }
+        }
+
+        .stars__title {
+            letter-spacing: 2px;    
+        
+            @include mixins.font-mixin(36px, 54px);
+        }
+     
+
+        .stars__title-line {
+            display: block;
+        }
     }
 }

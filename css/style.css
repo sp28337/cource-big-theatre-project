@@ -1,6 +1,28 @@
 .header {
   background-image: url("../../dist/img/header-background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #808080;
+  padding: 50px 0 179px;
+}
+.header .header__nav-wrp {
+  margin: 0 0 219px;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header__nav-item:nth-of-type(n+2) {
+  margin-left: 63px;
+}
+.header .header__nav-list {
+  display: flex;
+}
+.header .header__content {
+  display: flex;
+  justify-content: space-between;
+}
+.header .header__content-wrp {
+  padding: 88px 0 0;
+  max-width: 540px;
 }
 .header .header__nav-link {
   text-transform: uppercase;
@@ -16,15 +38,26 @@
 .header .header__title {
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  margin: 0 0 50px;
   font-size: 64px;
   line-height: 87px;
   font-weight: 700;
 }
 .header .header__desc {
   font-family: "Open Sans", sans-serif;
+  margin: 0 0 50px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+}
+.header .header__slider-img {
+  width: 370px;
+  height: 570px;
+  margin: 0 0 36px;
+}
+.header .header__btn-wrp {
+  display: flex;
+  justify-content: space-between;
 }
 .header .header__btn {
   text-transform: uppercase;
@@ -37,11 +70,35 @@
   font-weight: 700;
 }
 
+.about {
+  padding: 150px 0 0;
+}
+.about .about__title {
+  margin: 0 0 100px;
+}
+.about .about__wrp {
+  display: flex;
+  justify-content: space-between;
+}
+.about .about__item-content {
+  width: 449px;
+}
+.about .about__item-digits {
+  width: 225px;
+}
+.about .about__img {
+  width: 369px;
+  height: 323px;
+}
 .about .about__subtitle {
+  margin: 0 0 18px;
   text-transform: uppercase;
   font-size: 21px;
   line-height: 28px;
   font-weight: 700;
+}
+.about .about__subtitle--digits {
+  margin: 0 0 60px;
 }
 .about .about__desc {
   font-family: "Open Sans", sans-serif;
@@ -49,8 +106,58 @@
   line-height: 24px;
   font-weight: 400;
 }
+.about .section-title {
+  text-align: center;
+}
 
-.footer .footer__contacts-item-desc {
+.partners {
+  padding: 150px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.partners .section-title {
+  text-align: center;
+}
+.partners .partners__wrp {
+  padding: 60px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.partners .partners__wrp .partners__list {
+  display: flex;
+}
+.partners .partners__wrp .partners__list .partners__item:nth-of-type(n+2) {
+  margin-left: 78px;
+}
+.partners .partners__btn-wrp {
+  padding: 113px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  padding: 112px 0 0;
+}
+.footer .footer__contacts-wrp {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__contacts-wrp .footer__title {
+  height: 103px;
+  display: flex;
+  justify-content: center;
+}
+.footer .footer__contacts-wrp .footer__contacts-list {
+  height: 67px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__contacts-wrp .footer__contacts-list .footer__contacts-item-desc {
   font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
   font-style: normal;
@@ -58,15 +165,17 @@
   line-height: 28px;
   font-weight: 700;
 }
-.footer .footer__hr {
-  color: #565656;
-}
 .footer .footer__author-desc {
   font-family: "Open Sans", sans-serif;
   color: #989898;
+  border-top: 1px solid #565656;
+  padding: 52px 0 41px 0;
+  height: 48px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn {
@@ -85,6 +194,12 @@
   align-items: center;
 }
 
+.popup {
+  width: 865px;
+  height: 399px;
+  margin: 0 auto;
+  background-color: #2C2C2C;
+}
 .popup input::placeholder,
 .popup textarea::placeholder {
   font-family: "Open Sans", sans-serif;
@@ -94,37 +209,67 @@
   background: transparent;
   border: none;
 }
-.popup .popup__label {
+.popup .popup__form {
+  padding: 93px 63px 0 72px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.popup .popup__form .popup__form-wrp {
+  display: flex;
+  text-align: center;
+}
+.popup .popup__form .popup__form-wrp .popup__form-name-tel-wrp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.popup .popup__form .popup__form-wrp .popup__form-comp-email-wrp {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.popup .popup__form .popup__form-wrp .popup__label {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
   color: #989898;
 }
-.popup .popup__input-field {
+.popup .popup__form .popup__form-wrp .popup__input-field {
   text-transform: capitalize;
   background-color: #444444;
   width: 180px;
   min-height: 39px;
   border: 1px solid #616161;
 }
-.popup .popup__input-field--textarea {
+.popup .popup__form .popup__form-wrp .popup__input-field--textarea {
   width: 360px;
   min-height: 112px;
+  margin-left: 30px;
 }
-.popup .popup__hint {
+.popup .popup__form .popup__form-par-button-wrp {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 21px;
+}
+.popup .popup__form .popup__form-par-button-wrp .popup__hint {
   color: #989898;
   font-family: "Open Sans", sans-serif;
+  width: 390px;
+  text-align: left;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-.popup .button {
+.popup .popup__form .popup__form-par-button-wrp .button {
   font-family: "Open Sans Condensed", sans-serif;
   color: #FFFFFF;
   background: #D1A954;
   text-transform: uppercase;
   width: 190px;
+  height: 51px;
   min-height: 51px;
   border: none;
   font-size: 18px;
@@ -132,41 +277,87 @@
   font-weight: 700;
 }
 
+.staging {
+  padding: 119px 0 0;
+}
+.staging .section-title {
+  text-align: center;
+}
+.staging .staging__list {
+  margin: 113px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.staging .staging__item {
+  display: flex;
+  width: 370px;
+  height: 478px;
+}
+.staging .staging__item--building {
+  background-image: url("../../dist/img/staging1.webp");
+}
+.staging .staging__item--border {
+  background-image: url("../../dist/img/staging2.webp");
+}
+.staging .staging__item--hall {
+  background-image: url("../../dist/img/staging3.webp");
+}
 .staging .staging__item-title {
+  text-transform: uppercase;
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
-  text-transform: uppercase;
+}
+.staging .staging__item-title--oskar {
+  margin: 34px 0 0 33px;
+}
+.staging .staging__item-title--gramofon1 {
+  margin: 37px 0 0 57px;
+}
+.staging .staging__item-title--gramofon2 {
+  margin: 34px 0 0 33px;
 }
 .staging .staging__item-title {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.staging .staging__item-title--building {
-  background-image: url("../../dist/img/staging1.webp");
-}
-.staging .staging__item-title--border {
-  background-image: url("../../dist/img/staging2.webp");
-}
-.staging .staging__item-title--hall {
-  background-image: url("../../dist/img/staging3.webp");
-}
 
 .stars {
+  padding: 209px 25px;
+}
+.stars .stars__wrp {
   background-image: url("../../dist/img/stars.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 126px 190px;
+  display: flex;
+  justify-content: space-between;
 }
-.stars .stars__year-item {
-  font-size: 72px;
-  line-height: 98px;
-  font-weight: 700;
+.stars .stars__wrp .stars__year-list .stars__year-item {
   color: #D1A954;
+  margin: 0 0 20px;
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 700;
 }
-.stars .stars__title {
-  font-family: "Open Sans", sans-serif;
+.stars .stars__wrp .stars__year-list .stars__contetnt-wrp {
+  width: 540px;
+}
+.stars .stars__wrp .stars__year-list .stars__contetnt-wrp .stars__img {
+  padding: 7px 0 0 0;
+  margin: 0 0 31px;
+}
+.stars .stars__wrp .stars__title {
+  letter-spacing: 2px;
   font-size: 36px;
   line-height: 54px;
   font-weight: 700;
+}
+.stars .stars__wrp .stars__title-line {
+  display: block;
 }
 
 .digits__desc-orange {
@@ -216,6 +407,11 @@ textarea {
 
 .section-title-orange {
   color: #D1A954;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
