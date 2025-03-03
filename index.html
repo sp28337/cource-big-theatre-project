@@ -28,7 +28,7 @@
                     <p class="header__desc">Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</p>
                     <a href="#" class="header__link-poster btn">афиша</a>
                 </div>
-                <div>
+                <div class="header__slider">
                     <img class="header__slider-img" src="dist/img/header-slider-1.webp" alt="Big theatre">
                     <div class="header__btn-wrp">
                         <button type="button" class="header__btn">пред</button>
@@ -71,14 +71,14 @@
                 <div class="staging__item staging__item--building">
                     <h3 class="staging__item-title">ОСКАР<br>2020</h3></div>
                 <div class="staging__item staging__item--border">
-                    <h3 class="staging__item-title">золотой<br>грамофон</h3></div>
+                    <h3 class="staging__item-title staging__item-title--2">золотой<br>грамофон</h3></div>
                 <div class="staging__item staging__item--hall">
                     <h3 class="staging__item-title">золотой<br>грамофон</h3></div>
             </div>
         </section>
 
 
-        <section class="stars container">
+        <section class="stars">
             <div class="stars__wrp">
                 
                 <ul class="stars__year-list">
@@ -87,7 +87,7 @@
                     <li class="stars__year-item">2020</li>
                 </ul>
                 
-                <div class="stars__contetnt-wrp">
+                <div class="stars__content-wrp">
                     <div class="stars__img">
                         <img src="../img/star.svg" alt="star">
                         <img src="../img/star.svg" alt="star">
@@ -128,21 +128,25 @@
 
     <footer class="footer container">
         <h2 class="footer__title section-title"><span class="section-title-orange">контакты</span></h2>
-       
-        <ul class="footer__contacts-list">
-            <li class="footer__contacts-item">
-                <a href="tel:+78121234555">+7 (812) 123-45-55</a>
-            </li>
-            <li class="footer__contacts-item">
-                <a href="tel:+78121234566">+7 (812) 123-45-66</a>
-            </li>
-            <li class="footer__contacts-item">
-                <a href="mailto:info@theater.ru">info@theater.ru</a>
-            </li>
-            <li class="footer__contacts-item">
-                <address class="footer__contacts-item-desc">г. санкт-петербург, невский 140</address>
-            </li>
-        </ul>
+
+        <div class="footer__contacts-wrp">
+           <ul class="footer__contacts-list footer__contacts-list--left">
+               <li class="footer__contacts-item">
+                   <a href="tel:+78121234555">+7 (812) 123-45-55</a>
+               </li>
+               <li class="footer__contacts-item">
+                   <a href="tel:+78121234566">+7 (812) 123-45-66</a>
+               </li>
+           </ul>
+           <ul class="footer__contacts-list footer__contacts-list--right">
+               <li class="footer__contacts-item">
+                   <a href="mailto:info@theater.ru">info@theater.ru</a>
+               </li>
+               <li class="footer__contacts-item">
+                   <address class="footer__contacts-item-desc">г. санкт-петербург, невский 140</address>
+               </li>
+           </ul>
+       </div>
         
         <div class="footer__author-desc">
             <p class="footer__author-desc-para">(с) Все права защищены. Большой театр. 2020</p>

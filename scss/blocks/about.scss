@@ -15,15 +15,27 @@
 
     .about__item-content {
         width: 449px;
+        
+        @include mixins.desktop-wide {
+            width: 431px;
+        }
     }
 
     .about__item-digits {
         width: 225px;
+        
+        @include mixins.desktop-wide {
+            width: 208px;
+        }
     }
 
     .about__img {
         width: 369px;
         height: 323px;
+
+        @include mixins.desktop-wide {
+            display: none;
+        }
     }
 
     .about__subtitle {
@@ -31,6 +43,10 @@
         text-transform: uppercase;
         
         @include mixins.font-mixin(21px, 28px);
+        @include mixins.desktop-wide {
+            margin: 0 0 55px;
+        }
+
     }
    
     .about__subtitle--digits{

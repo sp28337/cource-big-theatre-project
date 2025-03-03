@@ -4,11 +4,19 @@
 
     padding: 119px 0 0;
 
+    @include mixins.desktop-wide {
+        padding: 80px 0 0;
+    }
+
     .staging__list {
         
         margin: 113px 0 0;
         
         @include mixins.flex-center();
+        @include mixins.desktop-wide {
+            margin: 100px 0 0;
+        }
+        
         
         .staging__item {
             background-repeat: no-repeat;
@@ -17,7 +25,12 @@
             width: 33%;
             min-height: 478px;
             padding: 34px 0 0 33px;
-            
+            box-sizing: border-box;
+
+            @include mixins.desktop-wide {
+                width: 50%;
+                min-height: 476px;
+            }
             
             &--building {
                 background-image: url("../../dist/img/staging1.webp");
@@ -29,15 +42,25 @@
             
             &--hall {
                 background-image: url("../../dist/img/staging3.webp");
+                
+                @include mixins.desktop-wide {
+                    display: none;
+                }
+            }
+            
+            
+            .staging__item-title {
+                text-transform: uppercase;
+                
+                @include mixins.font-mixin(24px, 32px);
+                
+                &--2 {
+                    @include mixins.desktop-wide {
+                        display: none;                    
+                    }
+                }
             }
         }
-    
-        .staging__item-title {
-            
-            text-transform: uppercase;
-            
-            @include mixins.font-mixin(24px, 32px);
         
-        }
     }
 }

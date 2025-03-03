@@ -2,14 +2,22 @@
 @use "mixins";
 
 .stars {
-    padding: 209px 25px 0 25px;
-    
+    padding: 209px 25px 0;
+    width: 1110px;
+    margin: 0 auto;
+
+
+    @include mixins.desktop-wide {
+        width: 100%;
+        padding: 125px 0 0;
+    }
+
     .stars__wrp {
         background-image: url("../../dist/img/stars.webp");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 126px 190px;
+        padding: 126px 100px 126px 190px;
 
         @include mixins.flex-space-between();
 
@@ -21,21 +29,39 @@
             @include mixins.font-mixin(72px, 72px);
         }
 
-        .stars__img {
-            padding: 7px 0 0 0;
-            margin: 0 0 31px;
-           
-            @include mixins.flex-space-between();
+        .stars__content-wrp {
+            width: 540px;
+
+            @include mixins.desktop-wide {
+                width: 456px;
+            }
+
+            .stars__img {
+                padding: 7px 0 0 0;
+                width: 445px;
+                margin: 0 0 35px;
+            
+                @include mixins.flex-space-between();
+                @include mixins.desktop-wide {
+                    width: 307px;
+                    margin: 0 0 25px;
+                }
+            }
+
+            .stars__title {
+                letter-spacing: 2px;
+                min-height: 149px;
+            
+                @include mixins.font-mixin(36px, 54px);
+                @include mixins.desktop-wide {
+                    @include mixins.font-mixin(34px, 51px);
+                }
+                
+                .stars__title-line {
+                    display: block;
+                }
+            }
         }
 
-        .stars__title {
-            letter-spacing: 2px;    
-        
-            @include mixins.font-mixin(36px, 54px);
-        }
-
-        .stars__title-line {
-            display: block;
-        }
     }
 }

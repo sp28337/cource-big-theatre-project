@@ -1,3 +1,5 @@
+@use "variables";
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -14,3 +16,21 @@
     line-height: $line-height-param;
     font-weight: $font-weight-param;
   }
+
+@mixin desktop-wide {
+    @media (max-width: variables.$desktop-wide) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: variables.$tablet) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: variables.$mobile) {
+        @content;
+    }
+}
