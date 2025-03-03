@@ -42,8 +42,4 @@
         
         @include mixins.font-mixin(16px, 24px, 400);
     }
-
-    .section-title {
-        text-align: center;
-    }
-};
+}

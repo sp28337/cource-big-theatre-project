@@ -2,9 +2,7 @@
 @use "mixins";
 
 .stars {
-
-    padding: 209px 25px;
-    
+    padding: 209px 25px 0 25px;
     
     .stars__wrp {
         background-image: url("../../dist/img/stars.webp");
@@ -14,24 +12,20 @@
         padding: 126px 190px;
 
         @include mixins.flex-space-between();
-        
+
         .stars__year-list {
-
-            .stars__year-item {
-                color: variables.$gold;
-                margin: 0 0 20px;
-
-                @include mixins.font-mixin(72px, 72px);
-            }
+            flex-direction: column;
+            color: variables.$gold;
         
-        .stars__contetnt-wrp {
-            width: 540px;
+            @include mixins.flex-space-between();
+            @include mixins.font-mixin(72px, 72px);
+        }
 
-            .stars__img {
-                padding: 7px 0 0 0;
-                margin: 0 0 31px;
-                }
-            }
+        .stars__img {
+            padding: 7px 0 0 0;
+            margin: 0 0 31px;
+           
+            @include mixins.flex-space-between();
         }
 
         .stars__title {
@@ -39,7 +33,6 @@
         
             @include mixins.font-mixin(36px, 54px);
         }
-     
 
         .stars__title-line {
             display: block;

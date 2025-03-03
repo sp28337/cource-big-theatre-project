@@ -19,6 +19,7 @@ textarea {
 
 .section-title {
     text-transform: uppercase;
+    text-align: center;
     @include mixins.font-mixin(48px, 65px, 300);
     letter-spacing: 0.1em;
 };

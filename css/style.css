@@ -106,70 +106,46 @@
   line-height: 24px;
   font-weight: 400;
 }
-.about .section-title {
-  text-align: center;
-}
 
 .partners {
   padding: 150px 0 0;
+}
+.partners .partners__list {
+  margin: 60px 0 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
-.partners .section-title {
-  text-align: center;
-}
-.partners .partners__wrp {
-  padding: 60px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.partners .partners__wrp .partners__list {
-  display: flex;
-}
-.partners .partners__wrp .partners__list .partners__item:nth-of-type(n+2) {
-  margin-left: 78px;
-}
-.partners .partners__btn-wrp {
-  padding: 113px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.partners .partners__btn {
+  margin: 113px auto 0 auto;
 }
 
 .footer {
-  padding: 112px 0 0;
+  padding: 112px 0 41px 0;
 }
-.footer .footer__contacts-wrp {
-  flex-direction: column;
+.footer .footer__title {
+  margin: 0 0 50px;
+}
+.footer .footer__contacts-list {
   display: flex;
   justify-content: space-between;
 }
-.footer .footer__contacts-wrp .footer__title {
-  height: 103px;
-  display: flex;
-  justify-content: center;
-}
-.footer .footer__contacts-wrp .footer__contacts-list {
-  height: 67px;
-  display: flex;
-  justify-content: space-between;
-}
-.footer .footer__contacts-wrp .footer__contacts-list .footer__contacts-item-desc {
+.footer .footer__contacts-item {
   font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
-  font-style: normal;
+  letter-spacing: 0.1em;
   font-size: 21px;
   line-height: 28px;
   font-weight: 700;
+}
+.footer .footer__contacts-item .footer__contacts-item-desc {
+  font-style: normal;
 }
 .footer .footer__author-desc {
   font-family: "Open Sans", sans-serif;
   color: #989898;
   border-top: 1px solid #565656;
-  padding: 52px 0 41px 0;
+  margin: 100px 0 0;
+  padding: 30px 0 0 0;
   height: 48px;
   font-size: 12px;
   line-height: 18px;
@@ -280,52 +256,38 @@
 .staging {
   padding: 119px 0 0;
 }
-.staging .section-title {
-  text-align: center;
-}
 .staging .staging__list {
   margin: 113px 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.staging .staging__item {
-  display: flex;
-  width: 370px;
-  height: 478px;
+.staging .staging__list .staging__item {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 33%;
+  min-height: 478px;
+  padding: 34px 0 0 33px;
 }
-.staging .staging__item--building {
+.staging .staging__list .staging__item--building {
   background-image: url("../../dist/img/staging1.webp");
 }
-.staging .staging__item--border {
+.staging .staging__list .staging__item--border {
   background-image: url("../../dist/img/staging2.webp");
 }
-.staging .staging__item--hall {
+.staging .staging__list .staging__item--hall {
   background-image: url("../../dist/img/staging3.webp");
 }
-.staging .staging__item-title {
+.staging .staging__list .staging__item-title {
   text-transform: uppercase;
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
 }
-.staging .staging__item-title--oskar {
-  margin: 34px 0 0 33px;
-}
-.staging .staging__item-title--gramofon1 {
-  margin: 37px 0 0 57px;
-}
-.staging .staging__item-title--gramofon2 {
-  margin: 34px 0 0 33px;
-}
-.staging .staging__item-title {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 
 .stars {
-  padding: 209px 25px;
+  padding: 209px 25px 0 25px;
 }
 .stars .stars__wrp {
   background-image: url("../../dist/img/stars.webp");
@@ -336,19 +298,20 @@
   display: flex;
   justify-content: space-between;
 }
-.stars .stars__wrp .stars__year-list .stars__year-item {
+.stars .stars__wrp .stars__year-list {
+  flex-direction: column;
   color: #D1A954;
-  margin: 0 0 20px;
+  display: flex;
+  justify-content: space-between;
   font-size: 72px;
   line-height: 72px;
   font-weight: 700;
 }
-.stars .stars__wrp .stars__year-list .stars__contetnt-wrp {
-  width: 540px;
-}
-.stars .stars__wrp .stars__year-list .stars__contetnt-wrp .stars__img {
+.stars .stars__wrp .stars__img {
   padding: 7px 0 0 0;
   margin: 0 0 31px;
+  display: flex;
+  justify-content: space-between;
 }
 .stars .stars__wrp .stars__title {
   letter-spacing: 2px;
@@ -399,6 +362,7 @@ textarea {
 
 .section-title {
   text-transform: uppercase;
+  text-align: center;
   font-size: 48px;
   line-height: 65px;
   font-weight: 300;
