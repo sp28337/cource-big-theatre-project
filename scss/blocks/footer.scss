@@ -7,6 +7,10 @@
     @include mixins.desktop-wide {
         padding: 62px 0 41px 0;
     }
+
+    @include mixins.tablet {
+        padding: 45px 0 41px 0;
+    }
     
     .footer__title {
         margin: 0 0 50px;
@@ -73,6 +77,9 @@
         @include mixins.flex-space-between();
         @include mixins.desktop-wide {
             margin: 75px 0 0;
+        }
+        @include mixins.tablet {
+            margin: 62px 0 0;
         }
     }
 }

@@ -12,4 +12,9 @@
 
     @include mixins.font-mixin(18px, 25px);
     @include mixins.flex-center();
+
+    @include mixins.tablet {
+        width: 326px;
+        min-height: 45px;
+    }
 }

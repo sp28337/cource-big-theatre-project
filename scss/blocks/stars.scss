@@ -17,16 +17,28 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 126px 100px 126px 190px;
+        padding: 150px 100px 160px 190px;
 
         @include mixins.flex-space-between();
+        
+        @include mixins.tablet {
+            padding: 126px 100px 126px;
+        }
 
         .stars__year-list {
             flex-direction: column;
             color: variables.$gold;
+            letter-spacing: 0.1em;
         
-            @include mixins.flex-space-between();
             @include mixins.font-mixin(72px, 72px);
+
+            li:nth-of-type(n+1) {
+                margin: 0 0 45px;
+            }
+
+            li:nth-of-type(3n) {
+                margin: 0px;
+            }
         }
 
         .stars__content-wrp {
@@ -34,6 +46,11 @@
 
             @include mixins.desktop-wide {
                 width: 456px;
+            }
+
+            @include mixins.tablet {
+                width: 388px;
+                margin: 0 0 0 30px;
             }
 
             .stars__img {
@@ -44,19 +61,38 @@
                 @include mixins.flex-space-between();
                 @include mixins.desktop-wide {
                     width: 307px;
-                    margin: 0 0 25px;
+                    margin: 0 0 20px;
+        
+                    img:nth-of-type(n+1) {
+                        width: 35px;
+                        height: 39px;
+                    }
                 }
-            }
+                @include mixins.tablet {
+                    margin: 0 0 60px;
+                    img:nth-of-type(n+1) {
+                        width: 30px;
+                        height: 38px;
+                    }
+                }
 
+            }
+            
             .stars__title {
                 letter-spacing: 2px;
                 min-height: 149px;
-            
+                font-family: variables.$font-family;
+                
                 @include mixins.font-mixin(36px, 54px);
                 @include mixins.desktop-wide {
                     @include mixins.font-mixin(34px, 51px);
+                    width: 457px;
+                    height: 213px;
                 }
-                
+                @include mixins.tablet {
+                    @include mixins.font-mixin(29px, 43px);
+                }
+
                 .stars__title-line {
                     display: block;
                 }

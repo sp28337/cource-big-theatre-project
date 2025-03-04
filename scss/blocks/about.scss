@@ -5,8 +5,16 @@
 
     padding: 150px 0 0;
 
+    @include mixins.tablet {
+        padding: 100px 0 0;
+    }
+
     .about__title {
-        margin: 0 0 100px;
+        margin: 0 0 110px;
+
+        @include mixins.tablet {
+            margin: 0 0 90px;
+        }
     }
 
     .about__wrp {
@@ -46,7 +54,9 @@
         @include mixins.desktop-wide {
             margin: 0 0 55px;
         }
-
+        @include mixins.tablet {
+            margin: 0 0 40px;
+        }
     }
    
     .about__subtitle--digits{
@@ -57,5 +67,9 @@
         font-family: variables.$font-family;
         
         @include mixins.font-mixin(16px, 24px, 400);
+
+        @include mixins.tablet {
+            @include mixins.font-mixin(14px, 21px, 400);
+        }
     }
 }

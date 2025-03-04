@@ -8,6 +8,9 @@
         padding: 200px 0 0;
     }
 
+    @include mixins.tablet {
+        padding: 50px 0 0;
+    }
 
     .partners__list {
         margin: 60px 0 0;

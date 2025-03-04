@@ -7,6 +7,9 @@
     @include mixins.desktop-wide {
         padding: 80px 0 0;
     }
+    @include mixins.tablet {
+        padding: 90px 0 0;
+    }
 
     .staging__list {
         
@@ -14,8 +17,14 @@
         
         @include mixins.flex-center();
         @include mixins.desktop-wide {
-            margin: 100px 0 0;
+            margin: 107px 0 0;
         }
+        @include mixins.tablet {
+            margin: 74px 0 0;
+            width: 690px;
+            height: 475px;
+        }
+
         
         
         .staging__item {
