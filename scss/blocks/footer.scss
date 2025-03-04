@@ -5,11 +5,15 @@
     padding: 112px 0 41px 0;
 
     @include mixins.desktop-wide {
-        padding: 62px 0 41px 0;
+        padding: 62px 0 49px 0;
     }
 
     @include mixins.tablet {
-        padding: 45px 0 41px 0;
+        padding: 45px 0 66px 0;
+    }
+
+    @include mixins.mobile {
+        padding: 70px 0 76px 0;
     }
     
     .footer__title {
@@ -60,8 +64,6 @@
                 }
             }    
         }
-
-        
     }
 
 

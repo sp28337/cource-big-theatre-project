@@ -15,10 +15,19 @@
         @include mixins.tablet {
             margin: 0 0 90px;
         }
+
+        @include mixins.mobile {
+            margin: 0 0 60px;
+        }
     }
 
     .about__wrp {
         @include mixins.flex-space-between();
+
+        @include mixins.mobile {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .about__item-content {
@@ -27,13 +36,32 @@
         @include mixins.desktop-wide {
             width: 431px;
         }
+        @include mixins.mobile {
+            text-align: center;
+        }
     }
+    
 
     .about__item-digits {
         width: 225px;
         
         @include mixins.desktop-wide {
             width: 208px;
+        }
+        
+        @include mixins.mobile {
+            width: 370px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .about__digits {
+            @include mixins.mobile {
+                display: flex;
+                justify-content: space-between;
+            }
         }
     }
 
@@ -70,6 +98,9 @@
 
         @include mixins.tablet {
             @include mixins.font-mixin(14px, 21px, 400);
+        }
+        @include mixins.mobile {
+            margin-bottom: 50px;
         }
     }
 }

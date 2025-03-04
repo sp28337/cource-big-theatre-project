@@ -3,11 +3,21 @@
 
 
 .popup {
+    width: 100%;
+    position: absolute;
+    background-color: #00000099;
+}
+
+.popup__container {
     width: 865px;
     height: 399px;
     margin: 0 auto;
-
     background-color: #2C2C2C;
+
+    @include mixins.desktop-wide {
+        width: 625px;
+        height: 524px;
+    }
 
     input::placeholder,
     textarea::placeholder {
@@ -27,23 +37,36 @@
         text-align: center;
         flex-direction: column;
 
+        @include mixins.desktop-wide {
+            padding: 100px 50px 0 65px;
+        }
+
         .popup__form-wrp {
 
-            display: flex;
-            text-align: center;
+            @include mixins.flex-space-between();
+            @include mixins.desktop-wide {
+                flex-direction: column;
+                width: 509px;
+                height: 230px;
+            }
+
+            .popup__form-wrp-second {
+
+                @include mixins.flex-space-between();
+                
+            }
+
             
             .popup__form-name-tel-wrp {
                 display: flex;
-                flex-direction: column;
                 justify-content: space-between;
-
+                flex-direction: column;
             }
 
             .popup__form-comp-email-wrp {
-                margin-left: 30px;
                 display: flex;
-                flex-direction: column;
                 justify-content: space-between;
+                flex-direction: column;
 
             }
             
@@ -59,13 +82,19 @@
                 width: 180px;
                 min-height: 39px;
                 border: 1px solid variables.$gray-popup;
+
+                @include mixins.desktop-wide {
+                    width: 230px;
+                    height: 35;
+
+                    &--textarea {
+                        width: 509px;
+                        min-height: 100px;
+                    }
+                }
+                
             }
 
-            .popup__input-field--textarea {
-                width: 360px;
-                min-height: 112px;
-                margin-left: 30px;
-            }
 
         }
 

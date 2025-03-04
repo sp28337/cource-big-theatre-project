@@ -33,7 +33,10 @@ textarea {
     margin: 0 auto;
 
     @include mixins.desktop-wide {
-        width: 665px;
+        width: 690px;
     }
-    
+
+    @include mixins.mobile {
+        width: 510px;
+    }
 }

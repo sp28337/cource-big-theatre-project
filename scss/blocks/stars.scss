@@ -11,6 +11,9 @@
         width: 100%;
         padding: 125px 0 0;
     }
+    @include mixins.mobile {
+        padding: 30px 0 0;
+    }
 
     .stars__wrp {
         background-image: url("../../dist/img/stars.webp");
@@ -24,6 +27,9 @@
         @include mixins.tablet {
             padding: 126px 100px 126px;
         }
+        @include mixins.mobile {
+            padding: 50px 0px 100px;
+        }
 
         .stars__year-list {
             flex-direction: column;
@@ -31,6 +37,9 @@
             letter-spacing: 0.1em;
         
             @include mixins.font-mixin(72px, 72px);
+            @include mixins.mobile {
+                display: none;
+            }
 
             li:nth-of-type(n+1) {
                 margin: 0 0 45px;
@@ -75,13 +84,15 @@
                         height: 38px;
                     }
                 }
+                @include mixins.mobile {
+                    display: none;
+                }
 
             }
             
             .stars__title {
                 letter-spacing: 2px;
                 min-height: 149px;
-                font-family: variables.$font-family;
                 
                 @include mixins.font-mixin(36px, 54px);
                 @include mixins.desktop-wide {
@@ -91,6 +102,13 @@
                 }
                 @include mixins.tablet {
                     @include mixins.font-mixin(29px, 43px);
+                }
+                @include mixins.mobile {
+                    text-transform: uppercase;
+                    text-align: center;
+
+                    @include mixins.font-mixin(40px, 60px);
+
                 }
 
                 .stars__title-line {

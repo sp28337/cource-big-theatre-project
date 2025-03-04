@@ -4,8 +4,8 @@
 .btn {
     background: variables.$gold;
     text-transform: uppercase;
-    width: 359px;
-    min-height: 72px;
+    width: 160px;
+    min-height: 50px;
     font-family: variables.$font-family-condensed;
     color: inherit;
     border: none;
@@ -13,8 +13,19 @@
     @include mixins.font-mixin(18px, 25px);
     @include mixins.flex-center();
 
+    @include mixins.desktop-wide {
+        width: 175px;
+        min-height: 50px;
+    }
+
     @include mixins.tablet {
-        width: 326px;
-        min-height: 45px;
+        width: 160px;
+        min-height: 50px;
+    }
+
+    @include mixins.mobile {
+        width: 100%;
+        min-height: 62px;
+        @include mixins.font-mixin(30px, 40px);
     }
 }

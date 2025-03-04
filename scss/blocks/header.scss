@@ -19,6 +19,45 @@
     padding: 0px;
   }
 
+  @include mixins.mobile {
+    height: 600px;
+  }
+
+  .header__open-nav {
+    display: none;
+
+    @include mixins.tablet {
+      display: block;
+      position: absolute;
+      background: none;
+      border: none;
+      fill: variables.$white;
+      margin: 48px 0 0 70px;
+    }
+
+    @include mixins.mobile {
+      display: block;
+      position: absolute;
+      background: none;
+      border: none;
+      fill: variables.$white;
+      margin: 60px 0 0 10px;
+    }
+  }
+
+  .header__close-nav {
+    display: none;
+
+    @include mixins.tablet {
+      display: block;
+      position: absolute;
+      background: none;
+      border: none;
+      fill: variables.$white;
+      margin: 38px 38px 0 246px;
+    }
+  }
+
   .header__nav-wrp {
     margin: 0 0 219px;
     
@@ -30,6 +69,7 @@
     }
 
     @include mixins.tablet {
+      display: none;
       background-color: variables.$dark-gray;
       justify-content: normal;
       position: absolute;
@@ -39,6 +79,10 @@
       padding: 0;
       top: 0;
       left: 0;
+    }
+
+    @include mixins.mobile {
+      display: none;
     }
   }
   
@@ -108,11 +152,37 @@
       margin: 252px 0 0 0;
     }
     
+    @include mixins.mobile {
+      margin: 190px 0 85px 0;
+      flex-direction: column;
+
+      @include mixins.flex-center();
+
+    }
+
   }
 
-  .header__link-poster {
-    width: 160px;
-    min-height: 50px;
+  .header__btn-wrp {
+    @include mixins.flex-space-between();
+
+    .header__btn {
+      color: variables.$white;
+      text-transform: uppercase;
+      background: none;
+      border: none;
+      font-family: variables.$font-family-condensed;
+      letter-spacing: 0.1em;
+      
+      @include mixins.font-mixin(18px, 25px);
+
+      &--right {
+        margin-right: 20px;
+      }
+      
+      &--left {
+        margin-left: 20px;
+      }
+    }
   }
 
   .header__slider {
@@ -132,10 +202,13 @@
 
   .header__title {
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     margin: 0 0 50px;
     
     @include mixins.font-mixin(64px, 87px);
+    @include mixins.tablet {
+      text-align: center;      
+    }
   }
 
   .header__desc {
@@ -149,19 +222,5 @@
     width: 370px;
     height: 570px;
     margin: 0 0 36px;
-  }
-
-  .header__btn-wrp {
-    @include mixins.flex-space-between();
-  }
-
-  .header__btn {
-    text-transform: uppercase;
-    color: inherit;
-    padding: 0;
-    border: none;
-    background: transparent;
-
-    @include mixins.font-mixin(18px, 24px);
   }
 }
