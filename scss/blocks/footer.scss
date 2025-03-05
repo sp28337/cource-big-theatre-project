@@ -3,28 +3,69 @@
 
 .footer {
     padding: 112px 0 41px 0;
+
+    @include mixins.desktop-wide {
+        padding: 62px 0 49px 0;
+    }
+
+    @include mixins.tablet {
+        padding: 45px 0 66px 0;
+    }
+
+    @include mixins.mobile {
+        padding: 70px 0 76px 0;
+    }
     
     .footer__title {
         margin: 0 0 50px;
     }
     
-    .footer__contacts-list {
+    .footer__contacts-wrp {
+        
         @include mixins.flex-space-between();
-    }        
-    
-    .footer__contacts-item {
-        font-family: variables.$font-family-condensed;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
         
-        @include mixins.font-mixin(21px, 28px);
-        
-        .footer__contacts-item-desc {
-            
-            font-style: normal;
-        }
+        .footer__contacts-list {
+            @include mixins.flex-space-between();
+            @include mixins.desktop-wide{
+                flex-direction: column;
+            }
+                   
+            .footer__contacts-item {
+                font-family: variables.$font-family-condensed;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                
+                @include mixins.font-mixin(21px, 28px);
+                @include mixins.desktop-wide {
+                    @include mixins.font-mixin(16px, 21px);
+                }
 
+                
+                .footer__contacts-item-desc {
+                    font-style: normal;
+                }
+        
+            }
+
+            &--left {
+                width: 495px;
+
+                @include mixins.desktop-wide{
+                    height: 70px;
+                }
+            }
+            
+            &--right {
+                width: 570px;
+                
+                @include mixins.desktop-wide{
+                    display: flex;
+                    align-items: flex-end;
+                }
+            }    
         }
+    }
+
 
     .footer__author-desc {
         font-family: variables.$font-family;
@@ -36,5 +77,11 @@
 
         @include mixins.font-mixin(12px, 18px, 400);
         @include mixins.flex-space-between();
+        @include mixins.desktop-wide {
+            margin: 75px 0 0;
+        }
+        @include mixins.tablet {
+            margin: 62px 0 0;
+        }
     }
 }

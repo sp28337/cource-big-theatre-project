@@ -11,16 +11,27 @@
 
     <header class="header">
         <div class="container">
-            <div class="header__nav-wrp">
+            <button class="header__open-nav">
+                <svg width="28" height="20" viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.666748 8.33333H20.6667V11.6667H0.666748V8.33333ZM0.666748 0H27.3334V3.33333H0.666748V0ZM0.666748 20H12.7251V16.6667H0.666748V20Z"/>
+                </svg>
+            </button>
+            <div class="header__nav-wrp header__nav-wrp--open">
+                <button class="header__close-nav">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z"/>
+                    </svg>
+                </button>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item"><a class="header__nav-link">Главная</a></li>
                         <li class="header__nav-item"><a class="header__nav-link" href="#">О театре</a></li>
                         <li class="header__nav-item"><a class="header__nav-link" href="#">Наши постановки</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="#"></a>партнёры театра</li>
                         <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
                     </ul>
                 </nav>
-                <a class="header__tel" href="tel:+7(999)999-99-99">+7(999)999-99-99</a>
+                <a class="header__tel" href="tel:+7(999)999-99-99">+7 (999) 999-99-99</a>
             </div>
             <div class="header__content">
                 <div class="header__content-wrp">
@@ -28,11 +39,24 @@
                     <p class="header__desc">Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</p>
                     <a href="#" class="header__link-poster btn">афиша</a>
                 </div>
-                <div>
+                <div class="header__slider">
                     <img class="header__slider-img" src="dist/img/header-slider-1.webp" alt="Big theatre">
                     <div class="header__btn-wrp">
-                        <button type="button" class="header__btn">пред</button>
-                        <button type="button" class="header__btn">след</button>
+                        <div class="header__btn-wrp-left">
+                            <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.292892 7.2929C-0.0976296 7.68342 -0.0976295 8.31659 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928935C7.68054 0.538411 7.04738 0.538411 6.65685 0.928935L0.292892 7.2929ZM41 7L1 7L1 9L41 9L41 7Z" fill="#FFFFFF"/>
+                            </svg>
+                                
+                            <button type="button" class="header__btn header__btn--left">пред</button>
+                        </div>
+                        <div class="header__btn-wrp-right">
+                            <div class="header__slider-arrow">
+                                <button type="button" class="header__btn header__btn--right">след</button>
+                                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M40.7071 8.70711C41.0976 8.31659 41.0976 7.68342 40.7071 7.2929L34.3431 0.928938C33.9526 0.538414 33.3195 0.538414 32.9289 0.928938C32.5384 1.31946 32.5384 1.95263 32.9289 2.34315L38.5858 8.00001L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM-1.74846e-07 9L40 9.00001L40 7.00001L1.74846e-07 7L-1.74846e-07 9Z" fill="#FFFFFF"/>
+                                </svg>
+                            </div>
+                        </div>        
                     </div>
                 </div>    
             </div>
@@ -69,16 +93,16 @@
             <h2 class="staging__title section-title"><span class="section-title-orange">наши</span> постановки</h2>
             <div class="staging__list">
                 <div class="staging__item staging__item--building">
-                    <h3 class="staging__item-title">ОСКАР<br>2020</h3></div>
+                    <h3 class="staging__item-title">ОСКАР <br>2020</h3></div>
                 <div class="staging__item staging__item--border">
-                    <h3 class="staging__item-title">золотой<br>грамофон</h3></div>
+                    <h3 class="staging__item-title staging__item-title--2">золотой<br>грамофон</h3></div>
                 <div class="staging__item staging__item--hall">
                     <h3 class="staging__item-title">золотой<br>грамофон</h3></div>
             </div>
         </section>
 
 
-        <section class="stars container">
+        <section class="stars">
             <div class="stars__wrp">
                 
                 <ul class="stars__year-list">
@@ -87,7 +111,7 @@
                     <li class="stars__year-item">2020</li>
                 </ul>
                 
-                <div class="stars__contetnt-wrp">
+                <div class="stars__content-wrp">
                     <div class="stars__img">
                         <img src="../img/star.svg" alt="star">
                         <img src="../img/star.svg" alt="star">
@@ -119,7 +143,7 @@
                 </li>
                 </ul>
             <div class="partners__btn-wrp">
-                <button class="partners__btn btn">Стать меценатом</button>
+                <button class="partners__btn">Стать меценатом</button>
             </div>
         </section>
     </main>
@@ -128,21 +152,25 @@
 
     <footer class="footer container">
         <h2 class="footer__title section-title"><span class="section-title-orange">контакты</span></h2>
-       
-        <ul class="footer__contacts-list">
-            <li class="footer__contacts-item">
-                <a href="tel:+78121234555">+7 (812) 123-45-55</a>
-            </li>
-            <li class="footer__contacts-item">
-                <a href="tel:+78121234566">+7 (812) 123-45-66</a>
-            </li>
-            <li class="footer__contacts-item">
-                <a href="mailto:info@theater.ru">info@theater.ru</a>
-            </li>
-            <li class="footer__contacts-item">
-                <address class="footer__contacts-item-desc">г. санкт-петербург, невский 140</address>
-            </li>
-        </ul>
+
+        <div class="footer__contacts-wrp">
+           <ul class="footer__contacts-list footer__contacts-list--left">
+               <li class="footer__contacts-item">
+                   <a href="tel:+78121234555">+7 (812) 123-45-55</a>
+               </li>
+               <li class="footer__contacts-item">
+                   <a href="tel:+78121234566">+7 (812) 123-45-66</a>
+               </li>
+           </ul>
+           <ul class="footer__contacts-list footer__contacts-list--right">
+               <li class="footer__contacts-item">
+                   <a href="mailto:info@theater.ru">info@theater.ru</a>
+               </li>
+               <li class="footer__contacts-item">
+                   <address class="footer__contacts-item-desc">г. санкт-петербург, невский 140</address>
+               </li>
+           </ul>
+       </div>
         
         <div class="footer__author-desc">
             <p class="footer__author-desc-para">(с) Все права защищены. Большой театр. 2020</p>
@@ -150,39 +178,43 @@
         </div>
     </footer>
 
-
     <div class="popup">
-        <button class="popup__close-btn" type="button">
-            <img src="./img/x.svg" alt="close">
-        </button>
-        <form class="popup__form" action="#">
-            <div class="popup__form-wrp">
-                <div class="popup__form-name-tel-wrp">
-                    <label class="popup__label">
-                        <input class="popup__input-field" type="text" placeholder="имя">
-                    </label>
-                    <label class="popup__label">
-                        <input class="popup__input-field" type="tel" placeholder="телефон">
-                    </label>
+        <div class="popup__container">
+            <button class="popup__close-btn" type="button">
+                <svg width="31" height="29" viewBox="0 0 31 29" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.25 2.74375L27.6688 0.25L15.5 12.0063L3.33125 0.25L0.75 2.74375L12.9188 14.5L0.75 26.2563L3.33125 28.75L15.5 16.9937L27.6688 28.75L30.25 26.2563L18.0812 14.5L30.25 2.74375Z" fill="white"/>
+                </svg>
+            </button>
+            <form class="popup__form" action="#">
+                <div class="popup__form-wrp">
+                    <div class="popup__form-wrp-second">
+                        <div class="popup__form-name-tel-wrp">
+                            <label class="popup__label">
+                                <input class="popup__input-field" type="text" placeholder="имя">
+                            </label>
+                            <label class="popup__label">
+                                <input class="popup__input-field" type="tel" placeholder="телефон">
+                            </label>
+                        </div>
+                        <div class="popup__form-comp-email-wrp">
+                            <label class="popup__label">
+                                <input class="popup__input-field" type="text" placeholder="компания">
+                            </label>
+                            <label class="popup__label">
+                                <input class="popup__input-field" type="email" placeholder="e-mail">
+                            </label>
+                        </div>
+                    </div>
+                    <textarea class="popup__input-field popup__input-field--textarea" placeholder="сообщение"></textarea>
                 </div>
-                <div class="popup__form-comp-email-wrp">
-                    <label class="popup__label">
-                        <input class="popup__input-field" type="text" placeholder="компания">
-                    </label>
-                    <label class="popup__label">
-                        <input class="popup__input-field" type="email" placeholder="e-mail">
-                    </label>
+                
+                <div class="popup__form-par-button-wrp">
+                    <p class="popup__hint">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
+                    <button class="popup__button button">отправить</button>
                 </div>
-                <textarea class="popup__input-field popup__input-field--textarea" placeholder="сообщение"></textarea>
-            </div>
-            
-            <div class="popup__form-par-button-wrp">
-                <p class="popup__hint">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
-                <button class="popup__button button">отправить</button>
-            </div>
-            
-        </form>
+                
+            </form>
+        </div>
     </div>
-
 </body>
 </html>

@@ -2,77 +2,227 @@
 @use "../variables";
 
 .header {
-    background-image: url("../../dist/img/header-background.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: variables.$gray-background;
-    padding: 50px 0  179px;
+  background-color: variables.$gray-background;
+  background-position: center;
+  padding: 50px 0  179px;
+  background-image: url("../../dist/img/header-background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mixins.desktop-wide {
+    padding: 50px 0 363px;
+  }
+
+  @include mixins.tablet {
+    height: 800px;
+    padding: 0px;
+  }
+
+  @include mixins.mobile {
+    height: 600px;
+  }
+
+  .header__open-nav {
+    display: none;
+
+    @include mixins.tablet {
+      display: block;
+      position: absolute;
+      background: none;
+      border: none;
+      fill: variables.$white;
+      margin: 48px 0 0 70px;
+    }
+
+    @include mixins.mobile {
+      display: block;
+      position: absolute;
+      background: none;
+      border: none;
+      fill: variables.$white;
+      margin: 60px 0 0 10px;
+    }
+  }
+
+  .header__close-nav {
+    display: none;
+
+    @include mixins.tablet {
+      display: block;
+      position: absolute;
+      background: none;
+      border: none;
+      fill: variables.$white;
+      margin: 38px 38px 0 246px;
+    }
+  }
+
+  .header__nav-wrp {
+    margin: 0 0 219px;
     
-    .header__nav-wrp {
-      margin: 0 0 219px;
+    @include mixins.flex-space-between();
 
-      @include mixins.flex-space-between();
+    @include mixins.desktop-wide {
+      flex-direction: column;
+      margin: 0 0 260px;
     }
 
-    .header__nav-item:nth-of-type(n+2) {
-      margin-left: 63px;
-    }
+    @include mixins.tablet {
+      display: none;
 
-    .header__nav-list {
-      display: flex;
-    }
+      &--open {
+        display: block;
+        background-color: variables.$dark-gray;
+        position: absolute;
+        height: 800px;
+        width: 300px;
+        margin: 0px 0px;
+        padding: 0;
+        top: 0;
+        left: 0;
+        }
+      }
 
-    .header__content {
-      @include mixins.flex-space-between();
+    @include mixins.mobile {
+      display: none;
     }
+  }
+  
+  .header__nav-list {
+    display: flex;
+    text-transform: uppercase;
 
-    .header__content-wrp {
-      padding: 88px 0 0;
-      max-width: 540px;
-    }
-
-    .header__nav-link {
-      text-transform: uppercase;
+    @include mixins.font-mixin(18px, 25px);
     
-      @include mixins.font-mixin(17px, 25px);
-    }
-
-    .header__tel {
-      @include mixins.font-mixin($line-height-param: 22px);
-    }
-
-    .header__title {
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin: 0 0 50px;
-     
-      @include mixins.font-mixin(64px, 87px);
-    }
-
-    .header__desc {
-      font-family: variables.$font-family;
-      margin: 0 0 50px;
-     
-      @include mixins.font-mixin(14px, 21px, 400);
+    @include mixins.desktop-wide {
+      justify-content: space-between;
+      margin: 0 0 29px;
+      
+      @include mixins.font-mixin(16px, 21px);
     }
     
-    .header__slider-img {
-      width: 370px;
-      height: 570px;
-      margin: 0 0 36px;
+    @include mixins.tablet {
+      display: block;
+      min-height: 305px;
+      min-width: 214px;
+      flex-direction: column;
+      padding: 140px 40px 45px;
+      margin: 0px;
+      
+      @include mixins.font-mixin(24px, 34px);
+      
+
+    }
+    
+    
+  }
+  
+  .header__nav-item:nth-of-type(n+2) {
+    margin-left: 63px;
+
+    @include mixins.desktop-wide {
+      margin-left: 0;
+    }
+    @include mixins.tablet {
+      &:nth-of-type(n+2) {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .header__content {
+    @include mixins.flex-space-between();
+
+    @include mixins.desktop-wide {
+      justify-content: center;
     }
 
-    .header__btn-wrp {
-      @include mixins.flex-space-between();
+    
+  }
+  
+  .header__content-wrp {
+    padding: 88px 0 0;
+    max-width: 540px;
+    
+    @include mixins.desktop-wide {
+      padding: 0;
     }
+    
+    @include mixins.tablet {
+      margin: 252px 0 0 0;
+    }
+    
+    @include mixins.mobile {
+      margin: 190px 0 85px 0;
+      flex-direction: column;
+
+      @include mixins.flex-center();
+
+    }
+
+  }
+
+  .header__btn-wrp {
+    @include mixins.flex-space-between();
 
     .header__btn {
+      color: variables.$white;
       text-transform: uppercase;
-      color: inherit;
-      padding: 0;
+      background: none;
       border: none;
-      background: transparent;
+      font-family: variables.$font-family-condensed;
+      letter-spacing: 0.1em;
+      
+      @include mixins.font-mixin(18px, 25px);
 
-      @include mixins.font-mixin(18px, 24px);
+      &--right {
+        margin-right: 20px;
+      }
+      
+      &--left {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .header__slider {
+    @include mixins.desktop-wide {
+      display: none;
+    }
+  }
+
+  .header__tel {
+    @include mixins.font-mixin($line-height-param: 22px);
+    
+    @include mixins.tablet {  
+      margin-left: 40px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid variables.$gold;
+    }
+  
+  }
+
+  .header__title {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 50px;
+    
+    @include mixins.font-mixin(64px, 87px);
+    @include mixins.tablet {
+      text-align: center;      
+    }
+  }
+
+  .header__desc {
+    font-family: variables.$font-family;
+    margin: 0 0 50px;
+    
+    @include mixins.font-mixin(14px, 21px, 400);
+  }
+  
+  .header__slider-img {
+    width: 370px;
+    height: 570px;
+    margin: 0 0 36px;
   }
 }
