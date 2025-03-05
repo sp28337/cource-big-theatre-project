@@ -31,7 +31,7 @@
     }
 
     .about__item-content {
-        width: 449px;
+        width: 40.5%;
         
         @include mixins.desktop-wide {
             width: 431px;
@@ -43,14 +43,14 @@
     
 
     .about__item-digits {
-        width: 225px;
+        width: 23.2%;
         
         @include mixins.desktop-wide {
-            width: 208px;
+            width: 31.7%;
         }
         
         @include mixins.mobile {
-            width: 370px;
+            width: 30.1%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -66,7 +66,7 @@
     }
 
     .about__img {
-        width: 369px;
+        width: 33.2%;
         height: 323px;
 
         @include mixins.desktop-wide {
