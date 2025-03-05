@@ -2,7 +2,7 @@
 @use "mixins";
 
 .stars {
-    padding: 209px 25px 0;
+    padding: 209px 0 0;
     width: 1110px;
     margin: 0 auto;
 
@@ -24,11 +24,16 @@
 
         @include mixins.flex-space-between();
         
+        @include mixins.desktop-wide {
+            padding: 126px 100px 126px 168px;
+        }
+
         @include mixins.tablet {
-            padding: 126px 100px 126px;
+            padding: 126px 100px 126px 90px;
         }
         @include mixins.mobile {
             padding: 50px 0px 100px;
+            justify-content: center;
         }
 
         .stars__year-list {
@@ -54,12 +59,16 @@
             width: 540px;
 
             @include mixins.desktop-wide {
-                width: 456px;
+                width: 70%;
+                margin: 0px;
             }
 
             @include mixins.tablet {
-                width: 388px;
                 margin: 0 0 0 30px;
+            }
+
+            @include mixins.mobile {
+                margin: 0;
             }
 
             .stars__img {
@@ -97,8 +106,8 @@
                 @include mixins.font-mixin(36px, 54px);
                 @include mixins.desktop-wide {
                     @include mixins.font-mixin(34px, 51px);
-                    width: 457px;
-                    height: 213px;
+                    
+
                 }
                 @include mixins.tablet {
                     @include mixins.font-mixin(29px, 43px);

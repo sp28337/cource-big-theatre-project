@@ -9,7 +9,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-
   @include mixins.desktop-wide {
     padding: 50px 0 363px;
   }
@@ -70,16 +69,19 @@
 
     @include mixins.tablet {
       display: none;
-      background-color: variables.$dark-gray;
-      justify-content: normal;
-      position: absolute;
-      height: 800px;
-      width: 300px;
-      margin: 0px 0px;
-      padding: 0;
-      top: 0;
-      left: 0;
-    }
+
+      &--open {
+        display: block;
+        background-color: variables.$dark-gray;
+        position: absolute;
+        height: 800px;
+        width: 300px;
+        margin: 0px 0px;
+        padding: 0;
+        top: 0;
+        left: 0;
+        }
+      }
 
     @include mixins.mobile {
       display: none;
@@ -109,13 +111,7 @@
       
       @include mixins.font-mixin(24px, 34px);
       
-      .header__nav-item:nth-of-type(n+1) {
-        margin-bottom: 40px;
-      }
 
-      .header__nav-item:nth-of-type(5n) {
-        margin-bottom: 0px;
-      }
     }
     
     
@@ -127,7 +123,11 @@
     @include mixins.desktop-wide {
       margin-left: 0;
     }
-
+    @include mixins.tablet {
+      &:nth-of-type(n+2) {
+        margin-top: 35px;
+      }
+    }
   }
 
   .header__content {
@@ -195,7 +195,9 @@
     @include mixins.font-mixin($line-height-param: 22px);
     
     @include mixins.tablet {  
-      padding-left: 40px;
+      margin-left: 40px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid variables.$gold;
     }
   
   }

@@ -8,6 +8,7 @@ body {
     @include mixins.font-mixin();
 }
 
+
 a {
     color: inherit;
     text-decoration: none;
@@ -29,14 +30,14 @@ textarea {
 };
 
 .container {
-    width: 1110px;
+    width: 90%;
     margin: 0 auto;
 
-    @include mixins.desktop-wide {
-        width: 690px;
-    }
+    // @include mixins.desktop-wide {
+    //     width: 690px;
+    // }
 
-    @include mixins.mobile {
-        width: 510px;
-    }
+    // @include mixins.mobile {
+    //     width: 510px;
+    // }
 }
