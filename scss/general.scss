@@ -30,14 +30,11 @@ textarea {
 };
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 
-    // @include mixins.desktop-wide {
-    //     width: 690px;
-    // }
-
-    // @include mixins.mobile {
-    //     width: 510px;
-    // }
+    @include mixins.desktop-wide {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
