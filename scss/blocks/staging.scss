@@ -53,10 +53,19 @@
          
             &--building {
                 background-image: url("../../dist/img/staging1.webp");
+                
+                @include mixins.retina {
+                    background-image: url("../../dist/img/staging1@2x.webp");
+                }
             }
             
             &--border {
                 background-image: url("../../dist/img/staging2.webp");
+                
+                @include mixins.retina {
+                    background-image: url("../../dist/img/staging2@2x.webp");
+                }
+                
                 @include mixins.mobile {
                     display: none;
                 }
@@ -65,6 +74,10 @@
             &--hall {
                 background-image: url("../../dist/img/staging3.webp");
                 
+                @include mixins.retina {
+                    background-image: url("../../dist/img/staging3@2x.webp");
+                }
+
                 @include mixins.desktop-wide {
                     display: none;
                 }

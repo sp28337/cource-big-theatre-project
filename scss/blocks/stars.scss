@@ -8,8 +8,12 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
     @include mixins.flex-center();
+
+    @include mixins.retina {
+        background-image: url("../../dist/img/stars@2x.webp");
+    }
+
 
     @include mixins.desktop-wide {
         width: 100%;
@@ -19,14 +23,15 @@
     @include mixins.tablet {
         margin: 120px auto 0;
     }
+    
     @include mixins.mobile {
         margin: 40px auto 0;
     }
 
     .stars__wrp {
         padding: 15% 17%;
-        @include mixins.flex-center();
 
+        @include mixins.flex-center();
 
         @include mixins.mobile {
             padding: 0;
