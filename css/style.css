@@ -7,6 +7,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .header {
+    background-image: url("../../dist/img/header-background@2x.webp");
+  }
+}
 @media (max-width: 1110px) {
   .header {
     padding: 50px 0 363px;
@@ -897,8 +902,18 @@
 .staging .staging__list .staging__item--building {
   background-image: url("../../dist/img/staging1.webp");
 }
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .staging .staging__list .staging__item--building {
+    background-image: url("../../dist/img/staging1@2x.webp");
+  }
+}
 .staging .staging__list .staging__item--border {
   background-image: url("../../dist/img/staging2.webp");
+}
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .staging .staging__list .staging__item--border {
+    background-image: url("../../dist/img/staging2@2x.webp");
+  }
 }
 @media (max-width: 576px) {
   .staging .staging__list .staging__item--border {
@@ -907,6 +922,11 @@
 }
 .staging .staging__list .staging__item--hall {
   background-image: url("../../dist/img/staging3.webp");
+}
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .staging .staging__list .staging__item--hall {
+    background-image: url("../../dist/img/staging3@2x.webp");
+  }
 }
 @media (max-width: 1110px) {
   .staging .staging__list .staging__item--hall {
@@ -940,6 +960,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .stars {
+    background-image: url("../../dist/img/stars@2x.webp");
+  }
 }
 @media (max-width: 1110px) {
   .stars {
