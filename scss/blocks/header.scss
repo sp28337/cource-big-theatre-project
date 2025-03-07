@@ -3,9 +3,10 @@
 
 .header {
   background-color: variables.$gray-background;
-  background-position: center;
   padding: 50px 0  179px;
+  position: relative;
   background-image: url("../../dist/img/header-background.webp");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -31,7 +32,7 @@
       background: none;
       border: none;
       fill: variables.$white;
-      margin: 48px 0 0 70px;
+      margin: 5% 0 0 0;
     }
 
     @include mixins.mobile {
@@ -74,7 +75,7 @@
         display: block;
         background-color: variables.$dark-gray;
         position: absolute;
-        height: 800px;
+        height: 100%;
         width: 300px;
         margin: 0;
         padding: 0;
@@ -88,14 +89,21 @@
     }
   }
   
+  .header__nav {
+    width: 83%;
+
+    @include mixins.desktop-wide {
+      width: initial;
+    }
+  }
+
   .header__nav-list {
-    display: flex;
     text-transform: uppercase;
 
+    @include mixins.flex-space-between();
     @include mixins.font-mixin(18px, 25px);
     
     @include mixins.desktop-wide {
-      justify-content: space-between;
       margin: 0 0 29px;
       
       @include mixins.font-mixin(16px, 21px);
@@ -109,16 +117,13 @@
       padding: 140px 40px 45px;
       margin: 0px;
       
+
       @include mixins.font-mixin(24px, 34px);
       
-
     }
-    
-    
   }
   
   .header__nav-item:nth-of-type(n+2) {
-    margin-left: 63px;
 
     @include mixins.desktop-wide {
       margin-left: 0;
@@ -142,20 +147,18 @@
       margin: 0 0 50px;
       
       @include mixins.font-mixin(64px, 87px);
-      @include mixins.tablet {
-        text-align: center;      
-      }
+
     }
 
     
   }
   
   .header__content-wrp {
-    padding: 88px 0 0;
+    align-content: center;
     width: 48.6%;
     
     @include mixins.desktop-wide {
-      width: 100%;
+      width: 80%;
     }
     
     @include mixins.tablet {
@@ -163,8 +166,9 @@
     }
 
     @include mixins.mobile {
-      margin: 0;
+      margin: 33.3% 0 0;
       padding: 0;
+      width: 100%;
 
       flex-direction: column;
 
