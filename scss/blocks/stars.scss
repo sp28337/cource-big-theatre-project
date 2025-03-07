@@ -2,38 +2,34 @@
 @use "mixins";
 
 .stars {
-    padding: 209px 0 0;
-    width: 1110px;
-    margin: 0 auto;
+    width: 75%;
+    margin: 209px auto 0;
+    background-image: url("../../dist/img/stars.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    @include mixins.flex-center();
 
     @include mixins.desktop-wide {
         width: 100%;
-        padding: 125px 0 0;
+        margin: 150px auto 0;
+    }
+
+    @include mixins.tablet {
+        margin: 120px auto 0;
     }
     @include mixins.mobile {
-        padding: 30px 0 0;
+        margin: 40px auto 0;
     }
 
     .stars__wrp {
-        background-image: url("../../dist/img/stars.webp");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 150px 100px 160px 190px;
+        padding: 15% 17%;
+        @include mixins.flex-center();
 
-        @include mixins.flex-space-between();
-        
-        @include mixins.desktop-wide {
-            padding: 126px 100px 126px 168px;
-        }
 
-        @include mixins.tablet {
-            padding: 126px 100px 126px 90px;
-        }
         @include mixins.mobile {
-            padding: 50px 0px 100px;
-            justify-content: center;
+            padding: 0;
         }
 
         .stars__year-list {
@@ -56,30 +52,36 @@
         }
 
         .stars__content-wrp {
-            width: 540px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 130px;
 
             @include mixins.desktop-wide {
                 width: 70%;
                 margin: 0px;
+                padding-left: 75px;
             }
 
             @include mixins.tablet {
-                margin: 0 0 0 30px;
+                padding-left: 30px;
             }
 
             @include mixins.mobile {
+                width: 80%;
                 margin: 0;
+                padding: 8% 0;
             }
 
             .stars__img {
                 padding: 7px 0 0 0;
                 width: 445px;
-                margin: 0 0 35px;
+                margin: 0 0 60px;
             
                 @include mixins.flex-space-between();
                 @include mixins.desktop-wide {
                     width: 307px;
-                    margin: 0 0 20px;
+                    margin: 0 0 40px;
         
                     img:nth-of-type(n+1) {
                         width: 35px;
@@ -88,6 +90,8 @@
                 }
                 @include mixins.tablet {
                     margin: 0 0 60px;
+                    width: 90%;
+                    
                     img:nth-of-type(n+1) {
                         width: 30px;
                         height: 38px;
@@ -101,9 +105,10 @@
             
             .stars__title {
                 letter-spacing: 2px;
-                min-height: 149px;
+                height: 58%;
                 
                 @include mixins.font-mixin(36px, 54px);
+
                 @include mixins.desktop-wide {
                     @include mixins.font-mixin(34px, 51px);
                     

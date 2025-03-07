@@ -30,6 +30,7 @@
         @include mixins.mobile {
             display: block;
             text-align: center;
+            width: initial;
 
             .partners__item:nth-of-type(n+1) {
                 margin-bottom: 25px;
@@ -45,8 +46,7 @@
                 margin: 0px;
                 
                 img {
-                    width: 352px;
-                    height: 177px;
+                    width: 69%;
                 }
 
             }

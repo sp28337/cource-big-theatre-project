@@ -59,7 +59,7 @@ function reload(cb) {
 }
 
 function webpTask() {
-    return src("img/*.{png,jpg,jpeg}")
+    return src("img/*.{jpg,jpeg}")
         .pipe(webp())
         .pipe(dest("dist/img"));
 }

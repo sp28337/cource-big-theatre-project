@@ -19,9 +19,13 @@
         height: 524px;
     }
 
+    @include mixins.tablet {
+        width: 85%;
+    }
+    
     @include mixins.mobile {
-        width: 495px;
-        height: 619px;
+        height: 100%;
+        width: 90%;
     }
 
     input::placeholder,
@@ -48,8 +52,12 @@
             margin: 14px 0 0 576px;
         }
 
+        @include mixins.tablet {
+            margin: 2% 0 0 76%;
+        }
+
         @include mixins.mobile {
-            margin: 14px 0 0 446px;
+            margin: 14px 0 0 80%;
         }
     }
 
@@ -64,7 +72,7 @@
             padding: 100px 50px 0 65px;
         }
         @include mixins.mobile {
-            padding: 78px 0 0 46px;
+            padding: 12.6% 10% 6.3%;
             text-align: justify;
         }
 
@@ -98,8 +106,13 @@
                 justify-content: space-between;
                 flex-direction: column;
 
+                @include mixins.tablet {
+                    width: 45%;
+                }
+
                 @include mixins.mobile {
                     height: 93px;
+                    width: 100%;
                 }
             }
 
@@ -113,8 +126,13 @@
                     margin-left: 0;
                 }
 
+                @include mixins.tablet {
+                    width: 45%;
+                }
+
                 @include mixins.mobile {
                     height: 93px;
+                    width: 100%;
                 }
             }
             
@@ -144,9 +162,17 @@
                         min-height: 100px;
                     }
                 }
+
+                @include mixins.tablet {
+                    width: 100%;
+
+                    &--textarea {
+                        width: 100%;
+                    }
+                }
                 
                 @include mixins.mobile {
-                    width: 397px;
+                    width: 100%;
                     height: 31px;
 
                     &--textarea {
@@ -174,7 +200,7 @@
             }
 
             @include mixins.mobile {
-                width: 403px;
+                width: 100%;
             }
             
             .popup__hint {
@@ -191,6 +217,11 @@
                     margin-top: 30px;
                     
                     @include mixins.font-mixin(12px, 18px);
+                }
+
+                @include mixins.mobile {
+                    width: 100%;
+                    height: initial;
                 }
             }
 
