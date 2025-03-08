@@ -4,244 +4,206 @@
 
 .popup {
     width: 100%;
-    position: absolute;
+    position: fixed;
+    height: 100vh;
     background-color: #00000099;
-}
-
-.popup__container {
-    width: 865px;
-    height: 399px;
-    margin: 0 auto;
-    background-color: #2C2C2C;
-
-    @include mixins.desktop-wide {
-        width: 625px;
-        height: 524px;
-    }
-
-    @include mixins.tablet {
-        width: 85%;
-    }
+    top: 0;
+    left: 0;
     
-    @include mixins.mobile {
-        height: 100%;
-        width: 90%;
-    }
+    @include mixins.flex-center();
 
-    input::placeholder,
-    textarea::placeholder {
-        font-family: variables.$font-family;
-        color: variables.$gray;
-        padding-left: 15px;
-    }
-
-    textarea::placeholder {
-        padding-top: 10px;
-    }
-
-
-    .popup__close-btn {
-        background: transparent;
-        border: none;
-        position: absolute;
-        width: 29px;
-        height: 28px;
-        margin: 14px 0 0 816px;
+    .popup__wrp {
+        background-color: variables.$dark-gray;
 
         @include mixins.desktop-wide {
-            margin: 14px 0 0 576px;
-        }
-
-        @include mixins.tablet {
-            margin: 2% 0 0 76%;
+            max-width: 60%;
+            min-height: 55%;
         }
 
         @include mixins.mobile {
-            margin: 14px 0 0 80%;
+            max-width: 90%;
         }
-    }
+        .popup__close-btn {
+            background: transparent;
+            border: none;
+            box-sizing: border-box;
+            display: block;
+            margin: 14px 14px 50px auto;
 
-    .popup__form {
-        
-        padding: 93px 63px 0 72px;
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-
-        @include mixins.desktop-wide {
-            padding: 100px 50px 0 65px;
-        }
-        @include mixins.mobile {
-            padding: 12.6% 10% 6.3%;
-            text-align: justify;
-        }
-
-        .popup__form-wrp {
-
-            @include mixins.flex-space-between();
             @include mixins.desktop-wide {
-                flex-direction: column;
-                height: 230px;
+                padding: 2.6% 3% 8% 89%;
+                margin: 0;
             }
-            @include mixins.mobile {
-                height: 332px;
-            }
+        }
 
-            .popup__form-wrp-second {
-                
-                @include mixins.flex-space-between();
-
-                @include mixins.desktop-wide {
-                    height: 100px;
-                }
-                
-                @include mixins.mobile {
-                    flex-direction: column;
-                    height: 209px;
-                }
-
-            }
-            .popup__form-name-tel-wrp {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-
-                @include mixins.tablet {
-                    width: 45%;
-                }
-
-                @include mixins.mobile {
-                    height: 93px;
-                    width: 100%;
-                }
-            }
-
-            .popup__form-comp-email-wrp {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-                margin-left: 30px;
-                
-                @include mixins.desktop-wide {
-                    margin-left: 0;
-                }
-
-                @include mixins.tablet {
-                    width: 45%;
-                }
-
-                @include mixins.mobile {
-                    height: 93px;
-                    width: 100%;
-                }
-            }
+        .popup__form {
+            display: grid;
+            grid-template-columns: 180px 180px 310px;
+            grid-template-rows: 39px 39px 92px;
+            gap: 30px;
+            padding: 0 63px 80px 72px;
             
+            @include mixins.desktop-wide {
+                grid-template-columns: initial;
+                grid-template-rows: 35px 35px 100px 50px auto;
+                padding: 0 8% 4.5% 10.4%;
+
+            @include mixins.mobile {
+                padding: 0 10% 8%;
+                grid-template-columns: 100%;
+                grid-template-rows: 35px 35px 35px 35px 100px 50px auto;
+            }
+
             .popup__label {
-                font-family: variables.$font-family;
-                @include mixins.font-mixin(14px, 21px, 600);
-                color: variables.$gray;
-            }
-
-            .popup__input-field {
-                text-transform: capitalize;
-                background-color: variables.$gray-popup-input;
-                width: 174px;
-                height: 35px;
-                border: 1px solid variables.$gray-popup;
-                
-                &--textarea {
-                    width: 304px;
-                    min-height: 106px;
+                @include mixins.desktop-wide {
+                    display: contents;
                 }
+            }
+            }        
+
+            .popup__label--textarea {
+                grid-column-start: 3;
+                grid-column-end: 4;                
+                grid-row-start: 1;
+                grid-row-end: 3;
 
                 @include mixins.desktop-wide {
-                    width: 230px;
-
-                    &--textarea {
-                        width: 504px;
-                        min-height: 100px;
-                    }
+                    grid-column-start: 1;
+                    grid-column-end: 3;                
+                    grid-row-start: 3;
+                    grid-row-end: 4;
                 }
 
-                @include mixins.tablet {
-                    width: 100%;
-
-                    &--textarea {
-                        width: 100%;
-                    }
-                }
-                
                 @include mixins.mobile {
-                    width: 100%;
-                    height: 31px;
+                    grid-column-start: 1;
+                    grid-column-end: 2;      
+                    grid-row-start: 5;
+                    grid-row-end: 6;
+                }
 
-                    &--textarea {
-                        margin-top: 23px;
+            }
+           
+            .popup__input-field {
+                padding: 0;
+                width: 100%;
+                height: 100%;
+
+                &--tel {
+                    @include mixins.desktop-wide {
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                        grid-row-start: 2;
+                        grid-row-end: 3;
                     }
                 }
 
-                
+                &--company {
+                    @include mixins.desktop-wide {
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                    }
+
+                    @include mixins.mobile {
+                        grid-column-start: 1;
+                        grid-column-end: 2;      
+                        grid-row-start: 3;
+                        grid-row-end: 4;
+                    }
+                }
             }
 
-
-        }
-
-
-        .popup__form-par-button-wrp {
-
-            display: flex;
-            justify-content: space-between;
-            padding-top: 21px;
-            
-            @include mixins.desktop-wide {
-                flex-direction: column-reverse;
-                padding-top: 40px;
-                align-items: center;
-            }
-
-            @include mixins.mobile {
+            .popup__input-field--textarea {
+                display: block;
                 width: 100%;
+                height: 100%;
+
+                @include mixins.desktop-wide {
+                    display: initial;
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 3;
+                    grid-row-end: 4;
+                }
+
+                @include mixins.mobile {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 5;
+                    grid-row-end: 6;
+                }
             }
             
+            input::placeholder,
+            textarea::placeholder {
+                color: variables.$gray;
+                font-family: variables.$font-family;
+                padding: 10px 0 10px 15px;
+
+                @include mixins.font-mixin(14px, 150%, 600);
+
+                @include mixins.desktop-wide {
+                    padding: 10px 0 10px 15px;
+                    @include mixins.font-mixin(12px, 150%, 600);
+                }
+            }
+    
+            input, textarea {
+                background: variables.$gray-popup-input;
+                border: 1px solid variables.$gray-popup;
+            }
+    
             .popup__hint {
                 color: variables.$gray;
+                grid-column: span 2;
                 font-family: variables.$font-family;
-                width: 390px;
-                text-align: left;
 
-                @include mixins.font-mixin(14px, 21px, 400);
+                @include mixins.font-mixin(14px, 150%, 400);
+
                 @include mixins.desktop-wide {
+                    grid-column-start: 1;
+                    grid-column-end: 3;                
+                    grid-row-start: 5;
+                    grid-row-end: 6;
                     text-align: center;
-                    width: 435px;
-                    height: 50px;
-                    margin-top: 30px;
-                    
-                    @include mixins.font-mixin(12px, 18px);
+
+                    @include mixins.font-mixin(12px, 150%, 400);
                 }
 
                 @include mixins.mobile {
-                    width: 100%;
-                    height: initial;
+                    grid-column-start: 1;
+                    grid-column-end: 2;      
+                    grid-row-start: 7;
+                    grid-row-end: 8;
                 }
             }
-
-            .button {
-                font-family: variables.$font-family-condensed;
-                color: variables.$white;
-                background: variables.$gold;
-                text-transform: uppercase;
+            
+            .popup__button {
+                display: block;
                 width: 190px;
                 height: 51px;
-                min-height: 51px;
-                border: none;
-
-                @include mixins.font-mixin(18px, 25px);
+                margin-left: auto;
 
                 @include mixins.desktop-wide {
+                    margin: 0;
                     width: 100%;
-                    @include mixins.font-mixin(30px, 41px);
+                    grid-column-start: 1;
+                    grid-column-end: 3;                
+                    grid-row-start: 4;
+                    grid-row-end: 5;
+
+                    @include mixins.font-mixin(30px, 100%);
+                }
+
+                @include mixins.mobile {
+                    grid-column-start: 1;
+                    grid-column-end: 2;      
+                    grid-row-start: 6;
+                    grid-row-end: 7;
                 }
             }
         }
+
     }
 }
