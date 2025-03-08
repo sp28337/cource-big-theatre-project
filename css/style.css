@@ -604,6 +604,11 @@
     min-height: 55%;
   }
 }
+@media (max-width: 576px) {
+  .popup .popup__wrp {
+    max-width: 90%;
+  }
+}
 .popup .popup__wrp .popup__close-btn {
   background: transparent;
   border: none;
@@ -613,7 +618,7 @@
 }
 @media (max-width: 1110px) {
   .popup .popup__wrp .popup__close-btn {
-    padding: 2.6% 3% 5% 91%;
+    padding: 2.6% 3% 8% 89%;
     margin: 0;
   }
 }
@@ -627,8 +632,15 @@
 @media (max-width: 1110px) {
   .popup .popup__wrp .popup__form {
     grid-template-columns: initial;
-    grid-template-rows: 35px 35px 100px 50px 50px;
+    grid-template-rows: 35px 35px 100px 50px auto;
     padding: 0 8% 4.5% 10.4%;
+  }
+}
+@media (max-width: 1110px) and (max-width: 576px) {
+  .popup .popup__wrp .popup__form {
+    padding: 0 10% 8%;
+    grid-template-columns: 100%;
+    grid-template-rows: 35px 35px 35px 35px 100px 50px auto;
   }
 }
 @media (max-width: 1110px) and (max-width: 1110px) {
@@ -648,6 +660,14 @@
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+  }
+}
+@media (max-width: 576px) {
+  .popup .popup__wrp .popup__form .popup__label--textarea {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
   }
 }
 .popup .popup__wrp .popup__form .popup__input-field {
@@ -671,6 +691,14 @@
     grid-row-end: 2;
   }
 }
+@media (max-width: 576px) {
+  .popup .popup__wrp .popup__form .popup__input-field--company {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
 .popup .popup__wrp .popup__form .popup__input-field--textarea {
   display: block;
   width: 100%;
@@ -683,6 +711,14 @@
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+  }
+}
+@media (max-width: 576px) {
+  .popup .popup__wrp .popup__form .popup__input-field--textarea {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
   }
 }
 .popup .popup__wrp .popup__form input::placeholder,
@@ -727,6 +763,14 @@
     font-weight: 400;
   }
 }
+@media (max-width: 576px) {
+  .popup .popup__wrp .popup__form .popup__hint {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+}
 .popup .popup__wrp .popup__form .popup__button {
   display: block;
   width: 190px;
@@ -744,6 +788,14 @@
     font-size: 30px;
     line-height: 100%;
     font-weight: 700;
+  }
+}
+@media (max-width: 576px) {
+  .popup .popup__wrp .popup__form .popup__button {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
   }
 }
 

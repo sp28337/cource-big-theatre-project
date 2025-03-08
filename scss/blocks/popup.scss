@@ -19,7 +19,10 @@
             max-width: 60%;
             min-height: 55%;
         }
-        
+
+        @include mixins.mobile {
+            max-width: 90%;
+        }
         .popup__close-btn {
             background: transparent;
             border: none;
@@ -28,7 +31,7 @@
             margin: 14px 14px 50px auto;
 
             @include mixins.desktop-wide {
-                padding: 2.6% 3% 5% 91%;
+                padding: 2.6% 3% 8% 89%;
                 margin: 0;
             }
         }
@@ -42,8 +45,14 @@
             
             @include mixins.desktop-wide {
                 grid-template-columns: initial;
-                grid-template-rows: 35px 35px 100px 50px 50px;
+                grid-template-rows: 35px 35px 100px 50px auto;
                 padding: 0 8% 4.5% 10.4%;
+
+            @include mixins.mobile {
+                padding: 0 10% 8%;
+                grid-template-columns: 100%;
+                grid-template-rows: 35px 35px 35px 35px 100px 50px auto;
+            }
 
             .popup__label {
                 @include mixins.desktop-wide {
@@ -63,6 +72,13 @@
                     grid-column-end: 3;                
                     grid-row-start: 3;
                     grid-row-end: 4;
+                }
+
+                @include mixins.mobile {
+                    grid-column-start: 1;
+                    grid-column-end: 2;      
+                    grid-row-start: 5;
+                    grid-row-end: 6;
                 }
 
             }
@@ -88,6 +104,13 @@
                         grid-row-start: 1;
                         grid-row-end: 2;
                     }
+
+                    @include mixins.mobile {
+                        grid-column-start: 1;
+                        grid-column-end: 2;      
+                        grid-row-start: 3;
+                        grid-row-end: 4;
+                    }
                 }
             }
 
@@ -102,6 +125,13 @@
                     grid-column-end: 3;
                     grid-row-start: 3;
                     grid-row-end: 4;
+                }
+
+                @include mixins.mobile {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 5;
+                    grid-row-end: 6;
                 }
             }
             
@@ -140,6 +170,13 @@
 
                     @include mixins.font-mixin(12px, 150%, 400);
                 }
+
+                @include mixins.mobile {
+                    grid-column-start: 1;
+                    grid-column-end: 2;      
+                    grid-row-start: 7;
+                    grid-row-end: 8;
+                }
             }
             
             .popup__button {
@@ -157,6 +194,13 @@
                     grid-row-end: 5;
 
                     @include mixins.font-mixin(30px, 100%);
+                }
+
+                @include mixins.mobile {
+                    grid-column-start: 1;
+                    grid-column-end: 2;      
+                    grid-row-start: 6;
+                    grid-row-end: 7;
                 }
             }
         }
