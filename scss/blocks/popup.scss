@@ -12,6 +12,10 @@
     
     @include mixins.flex-center();
 
+    &--hidden {
+        display: none;
+    }
+
     .popup__wrp {
         background-color: variables.$dark-gray;
 

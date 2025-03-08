@@ -1,45 +1,8 @@
-/*                OLD WAY
-
-const gulp = require("gulp");
-const sass = require("gulp-sass")(require("sass"));
-const webp = require("gulp-webp");
-const browserSync = require("browser-sync").create();
-
-gulp.task("css", function () {
-    return gulp.src("./scss/style.scss")
-        .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest("./css"));
-})
-
-gulp.task("server", function () {
-    browserSync.init({
-        server: {baseDir: "./"}
-    });
-});
-
-
-gulp.task("reload", function (done) {
-    browserSync.reload();
-    done();
-});
-
-
-gulp.task("webp", function () {
-    return gulp.src("img/*.{png, jpg, jpeg}")
-        .pipe(webp())
-        .pipe(gulp.dest("dest"));
-});
-
-gulp.watch("scss/**//*.{scss, sass}", gulp.series("css", "reload"));
-gulp.watch("*.html", gulp.series("reload"));
-
-gulp.task("start", gulp.series("css", "server")); 
-*/
-
 const { series, dest, watch, src } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const webp = require('gulp-webp');
 const browserSync = require('browser-sync').create();
+const svgSprite = require('gulp-svg-sprite');
 
 function css() {
     return src("./scss/style.scss")
@@ -64,6 +27,19 @@ function webpTask() {
         .pipe(dest("dist/img"));
 }
 
+function svg() {
+    return src('img/*.svg')
+    .pipe(svgSprite({
+        mode: {
+            stack: {
+                sprite: "../sprite.svg"
+            }}    
+        })
+    ).pipe(dest('dist/img/icons'));
+}
+
+
+exports.svg = svg
 exports.css = css;
 exports.server = server;
 exports.webpTask = webpTask;

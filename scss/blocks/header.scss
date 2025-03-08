@@ -32,33 +32,56 @@
 
     @include mixins.tablet {
       display: block;
-      position: absolute;
-      background: none;
+      padding: 0;
       border: none;
-      fill: variables.$white;
-      margin: 5% 0 0 0;
     }
 
-    @include mixins.mobile {
-      display: block;
-      position: absolute;
-      background: none;
-      border: none;
-      fill: variables.$white;
-      margin: 60px 0 0 10px;
+    .header__open-nav-icon {
+
+      @include mixins.tablet {
+        height: 20px;
+        width: 26px;
+        display: block;
+        position: absolute;
+        background: none;
+        border: none;
+        fill: variables.$white;
+        margin: 5% 0 0 8%;
+      }
+
+      @include mixins.mobile {
+        display: block;
+        position: absolute;
+        background: none;
+        border: none;
+        fill: variables.$white;
+        margin: 60px 0 0 10px;
+      }
     }
   }
 
   .header__close-nav {
     display: none;
+    padding: 0;
+    border: none;
 
     @include mixins.tablet {
       display: block;
-      position: absolute;
-      background: none;
-      border: none;
-      fill: variables.$white;
-      margin: 38px 38px 0 246px;
+    }
+
+    .header__close-nav-icon {
+      
+      @include mixins.tablet {
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        background: none;
+        border: none;
+        fill: variables.$white;
+        margin: 38px 38px 0 246px;
+
+      }
     }
   }
 
@@ -152,9 +175,11 @@
       
       @include mixins.font-mixin(64px, 87px);
 
-    }
+      @include mixins.mobile {
+        text-align: center;
+      }
 
-    
+    }
   }
   
   .header__content-wrp {

@@ -34,15 +34,24 @@
 @media (max-width: 768px) {
   .header .header__open-nav {
     display: block;
+    padding: 0;
+    border: none;
+  }
+}
+@media (max-width: 768px) {
+  .header .header__open-nav .header__open-nav-icon {
+    height: 20px;
+    width: 26px;
+    display: block;
     position: absolute;
     background: none;
     border: none;
     fill: #FFFFFF;
-    margin: 5% 0 0 0;
+    margin: 5% 0 0 8%;
   }
 }
 @media (max-width: 576px) {
-  .header .header__open-nav {
+  .header .header__open-nav .header__open-nav-icon {
     display: block;
     position: absolute;
     background: none;
@@ -53,9 +62,18 @@
 }
 .header .header__close-nav {
   display: none;
+  padding: 0;
+  border: none;
 }
 @media (max-width: 768px) {
   .header .header__close-nav {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .header .header__close-nav .header__close-nav-icon {
+    width: 16px;
+    height: 16px;
     display: block;
     position: absolute;
     background: none;
@@ -159,6 +177,11 @@
   font-size: 64px;
   line-height: 87px;
   font-weight: 700;
+}
+@media (max-width: 576px) {
+  .header .header__content .header__title {
+    text-align: center;
+  }
 }
 .header .header__content-wrp {
   align-content: center;
@@ -290,6 +313,9 @@
 }
 .about .about__item-digits {
   width: 23.2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (max-width: 1110px) {
   .about .about__item-digits {
@@ -304,6 +330,19 @@
     justify-content: center;
     text-align: center;
   }
+}
+.about .about__item-digits .about__digits .digits__item-about1 {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 5%;
+}
+.about .about__item-digits .about__digits .digits__desc--1600 {
+  margin-bottom: 15%;
+}
+.about .about__item-digits .about__digits .digits__item-about2 {
+  width: 70px;
+  height: 64px;
+  margin-bottom: 5%;
 }
 @media (max-width: 576px) {
   .about .about__item-digits .about__digits {
@@ -339,7 +378,7 @@
   }
 }
 .about .about__subtitle--digits {
-  margin: 0 0 60px;
+  margin: 0 0 10%;
 }
 .about .about__desc {
   font-family: "Open Sans", sans-serif;
@@ -594,6 +633,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.popup--hidden {
+  display: none;
 }
 .popup .popup__wrp {
   background-color: #333333;
