@@ -9,6 +9,7 @@
     font-family: variables.$font-family-condensed;
     color: inherit;
     border: none;
+    letter-spacing: 2px;
 
     @include mixins.font-mixin(18px, 25px);
     @include mixins.flex-center();

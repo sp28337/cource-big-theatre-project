@@ -178,41 +178,41 @@
         </div>
     </footer>
 
-    <div class="popup">
-        <div class="popup__container">
+    <div class="popup popup--hidden">
+        <div class="popup__wrp">
             <button class="popup__close-btn" type="button">
                 <svg width="31" height="29" viewBox="0 0 31 29" xmlns="http://www.w3.org/2000/svg">
                     <path d="M30.25 2.74375L27.6688 0.25L15.5 12.0063L3.33125 0.25L0.75 2.74375L12.9188 14.5L0.75 26.2563L3.33125 28.75L15.5 16.9937L27.6688 28.75L30.25 26.2563L18.0812 14.5L30.25 2.74375Z" fill="white"/>
                 </svg>
             </button>
             <form class="popup__form" action="#">
-                <div class="popup__form-wrp">
-                    <div class="popup__form-wrp-second">
-                        <div class="popup__form-name-tel-wrp">
-                            <label class="popup__label">
-                                <input class="popup__input-field" type="text" placeholder="имя">
-                            </label>
-                            <label class="popup__label">
-                                <input class="popup__input-field" type="tel" placeholder="телефон">
-                            </label>
-                        </div>
-                        <div class="popup__form-comp-email-wrp">
-                            <label class="popup__label">
-                                <input class="popup__input-field" type="text" placeholder="компания">
-                            </label>
-                            <label class="popup__label">
-                                <input class="popup__input-field" type="email" placeholder="e-mail">
-                            </label>
-                        </div>
-                    </div>
-                    <textarea class="popup__input-field popup__input-field--textarea" placeholder="сообщение"></textarea>
-                </div>
                 
-                <div class="popup__form-par-button-wrp">
-                    <p class="popup__hint">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
-                    <button class="popup__button button">отправить</button>
-                </div>
-                
+                <label class="popup__label">
+                    <input class="popup__input-field" type="text" placeholder="Имя">
+                </label>
+                <span class="visually-hidden">имя</span>
+                <label class="popup__label">
+                    <input class="popup__input-field" type="tel" placeholder="Телефон">
+                </label>
+                <span class="visually-hidden">телефон</span>
+                <label class="popup__label">
+                    <input class="popup__input-field" type="text" placeholder="Компания">
+                </label>
+                <span class="visually-hidden">компания</span>
+                <label class="popup__label">
+                    <input class="popup__input-field" type="email" placeholder="E-mail">
+                    <span class="visually-hidden">e-mail</span>
+                </label>
+                <label class="popup__label popup__label--textarea">
+                    <textarea class="popup__input-field popup__input-field--textarea" placeholder="Сообщение"></textarea>
+                    <span class="visually-hidden">сообщение</span>
+                </label>
+
+                <p class="popup__hint">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
+                <div>
+                    <button class="popup__button btn">отправить</button>
+
+                </div>    
             </form>
         </div>
     </div>

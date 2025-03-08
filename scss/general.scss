@@ -29,6 +29,11 @@ textarea {
     color: variables.$gold;
 };
 
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
