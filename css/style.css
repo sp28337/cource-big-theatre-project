@@ -170,35 +170,22 @@
     justify-content: center;
   }
 }
-.header .header__content .header__title {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 0 0 50px;
-  font-size: 64px;
-  line-height: 87px;
-  font-weight: 700;
-}
-@media (max-width: 576px) {
-  .header .header__content .header__title {
-    text-align: center;
-  }
-}
-.header .header__content-wrp {
+.header .header__content .header__content-wrp {
   align-content: center;
   width: 48.6%;
 }
 @media (max-width: 1110px) {
-  .header .header__content-wrp {
+  .header .header__content .header__content-wrp {
     width: 80%;
   }
 }
 @media (max-width: 768px) {
-  .header .header__content-wrp {
+  .header .header__content .header__content-wrp {
     padding: 260px 0 0;
   }
 }
 @media (max-width: 576px) {
-  .header .header__content-wrp {
+  .header .header__content .header__content-wrp {
     margin: 33.3% 0 0;
     padding: 0;
     width: 100%;
@@ -208,34 +195,50 @@
     align-items: center;
   }
 }
-.header .header__btn-wrp {
+.header .header__content .header__content-wrp .header__title {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 50px;
+  font-size: 64px;
+  line-height: 87px;
+  font-weight: 700;
+}
+@media (max-width: 576px) {
+  .header .header__content .header__content-wrp .header__title {
+    text-align: center;
+  }
+}
+.header .header__content .header__slider {
+  width: 33.3%;
+}
+@media (max-width: 1110px) {
+  .header .header__content .header__slider {
+    display: none;
+  }
+}
+.header .header__content .header__slider .header__slider-wrp {
   display: flex;
   justify-content: space-between;
 }
-.header .header__btn-wrp .header__btn {
+.header .header__content .header__slider .header__slider-wrp .header__arrow {
+  width: 29.4%;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header__content .header__slider .header__slider-wrp .header__arrow-icon {
+  width: 36.6%;
+  height: 30px;
+}
+.header .header__content .header__slider .header__slider-wrp .header__btn {
   color: #FFFFFF;
   text-transform: uppercase;
   background: none;
   border: none;
   font-family: "Open Sans Condensed", sans-serif;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   font-size: 18px;
   line-height: 25px;
   font-weight: 700;
-}
-.header .header__btn-wrp .header__btn--right {
-  margin-right: 20px;
-}
-.header .header__btn-wrp .header__btn--left {
-  margin-left: 20px;
-}
-.header .header__slider {
-  width: 33.3%;
-}
-@media (max-width: 1110px) {
-  .header .header__slider {
-    display: none;
-  }
 }
 .header .header__tel {
   font-size: 16px;
