@@ -49,6 +49,9 @@
 
     .about__item-digits {
         width: 23.2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         
         @include mixins.desktop-wide {
             width: 31.7%;
@@ -63,10 +66,28 @@
         }
 
         .about__digits {
+            
+            .digits__item-about1 {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 5%;
+            }
+
+            .digits__desc--1600 {
+                margin-bottom: 15%;
+            }
+
+            .digits__item-about2 {
+                width: 70px;
+                height: 64px;
+                margin-bottom: 5%;
+            }
+            
             @include mixins.mobile {
                 display: flex;
                 justify-content: space-around;
             }
+
         }
     }
 
@@ -94,7 +115,7 @@
     }
    
     .about__subtitle--digits{
-        margin: 0 0 60px;
+        margin: 0 0 10%;
     }
 
     .about__desc {

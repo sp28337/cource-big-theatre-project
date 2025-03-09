@@ -12,14 +12,14 @@
     <header class="header">
         <div class="container">
             <button class="header__open-nav">
-                <svg width="28" height="20" viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.666748 8.33333H20.6667V11.6667H0.666748V8.33333ZM0.666748 0H27.3334V3.33333H0.666748V0ZM0.666748 20H12.7251V16.6667H0.666748V20Z"/>
+                <svg class="header__open-nav-icon">
+                    <use href="dist/img/icons/sprite.svg#open-btn"></use>
                 </svg>
             </button>
             <div class="header__nav-wrp header__nav-wrp--open">
                 <button class="header__close-nav">
-                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z"/>
+                    <svg class="header__close-nav-icon">
+                        <use href="dist/img/icons/sprite.svg#close-btn"></use>
                     </svg>
                 </button>
                 <nav class="header__nav">
@@ -41,21 +41,19 @@
                 </div>
                 <div class="header__slider">
                     <img class="header__slider-img" srcset="dist/img/header-slider-1.webp 1x, dist/img/header-slider-1@2x.webp 2x" src="dist/img/header-slider-1.webp" alt="Big theatre">
-                    <div class="header__btn-wrp">
-                        <div class="header__btn-wrp-left">
-                            <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.292892 7.2929C-0.0976296 7.68342 -0.0976295 8.31659 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928935C7.68054 0.538411 7.04738 0.538411 6.65685 0.928935L0.292892 7.2929ZM41 7L1 7L1 9L41 9L41 7Z" fill="#FFFFFF"/>
-                            </svg>
-                                
+                    <div class="header__slider-wrp">
+                        <div class="header__arrow header__arrow--left">
+                            <svg class="header__arrow-icon">
+                                <use href="dist/img/icons/sprite.svg#arrow-left"></use>
+                            </svg>    
                             <button type="button" class="header__btn header__btn--left">пред</button>
                         </div>
-                        <div class="header__btn-wrp-right">
-                            <div class="header__slider-arrow">
-                                <button type="button" class="header__btn header__btn--right">след</button>
-                                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M40.7071 8.70711C41.0976 8.31659 41.0976 7.68342 40.7071 7.2929L34.3431 0.928938C33.9526 0.538414 33.3195 0.538414 32.9289 0.928938C32.5384 1.31946 32.5384 1.95263 32.9289 2.34315L38.5858 8.00001L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM-1.74846e-07 9L40 9.00001L40 7.00001L1.74846e-07 7L-1.74846e-07 9Z" fill="#FFFFFF"/>
-                                </svg>
-                            </div>
+                        <div class="header__arrow header__arrow--right">
+                            <button type="button" class="header__btn header__btn--right">след</button>
+                            <svg class="header__arrow-icon">
+                                <use href="dist/img/icons/sprite.svg#arrow-right"></use>
+                            </svg>   
+
                         </div>        
                     </div>
                 </div>    
@@ -77,9 +75,15 @@
                     <h3 class="about__subtitle about__subtitle--digits">немного о цифрах</h3>
                     <ul class="about__digits digits">
                         <li class="digits__item">
-                            <p class="digits__desc"><span class="digits__desc-orange">1600</span>посадочных мест</p>
+                            <svg class="digits__item-about1">
+                                <use href="dist/img/icons/sprite.svg#about1"></use>
+                            </svg>
+                            <p class="digits__desc digits__desc--1600"><span class="digits__desc-orange">1600</span>посадочных мест</p>
                         </li>
                         <li class="digits__item">
+                            <svg class="digits__item-about2">
+                                <use href="dist/img/icons/sprite.svg#about2"></use>
+                            </svg>
                             <p class="digits__desc"><span class="digits__desc-orange">350</span> лет истории</p>
                         </li>
                     </ul>
@@ -113,11 +117,21 @@
                 
                 <div class="stars__content-wrp">
                     <div class="stars__img">
-                        <img src="../img/star.svg" alt="star">
-                        <img src="../img/star.svg" alt="star">
-                        <img src="../img/star.svg" alt="star">
-                        <img src="../img/star.svg" alt="star">
-                        <img src="../img/star.svg" alt="star">
+                        <svg class="stars__img-icon">
+                            <use href="dist/img/icons/sprite.svg#star"></use>
+                        </svg>  
+                        <svg class="stars__img-icon">
+                            <use href="dist/img/icons/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="stars__img-icon">
+                            <use href="dist/img/icons/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="stars__img-icon">
+                            <use href="dist/img/icons/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="stars__img-icon">
+                            <use href="dist/img/icons/sprite.svg#star"></use>
+                        </svg>
                     </div>
                     <h2 class="stars__title">Лучший театр <span class="stars__title-line">по мнению театральных </span>критиков Парижа</h2>
                 </div>

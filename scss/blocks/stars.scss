@@ -8,12 +8,10 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    @include mixins.flex-center();
 
     @include mixins.retina {
         background-image: url("../../dist/img/stars@2x.webp");
     }
-
 
     @include mixins.desktop-wide {
         width: 100%;
@@ -23,7 +21,7 @@
     @include mixins.tablet {
         margin: 120px auto 0;
     }
-    
+
     @include mixins.mobile {
         margin: 40px auto 0;
     }
@@ -60,13 +58,10 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding-left: 130px;
+            padding-left: 10%;
+            width: 100%;
 
-            @include mixins.desktop-wide {
-                width: 70%;
-                margin: 0px;
-                padding-left: 75px;
-            }
+
 
             @include mixins.tablet {
                 padding-left: 30px;
@@ -80,46 +75,47 @@
 
             .stars__img {
                 padding: 7px 0 0 0;
-                width: 445px;
-                margin: 0 0 60px;
+                width: 70%;
+                margin: 0 0 7%;
             
                 @include mixins.flex-space-between();
                 @include mixins.desktop-wide {
-                    width: 307px;
-                    margin: 0 0 40px;
-        
-                    img:nth-of-type(n+1) {
-                        width: 35px;
-                        height: 39px;
-                    }
+                    width: 85%;
                 }
                 @include mixins.tablet {
-                    margin: 0 0 60px;
                     width: 90%;
-                    
-                    img:nth-of-type(n+1) {
-                        width: 30px;
-                        height: 38px;
-                    }
                 }
                 @include mixins.mobile {
                     display: none;
                 }
 
+                .stars__img-icon{
+                    width: 50px;
+                    height: 52px;
+
+                    @include mixins.desktop-wide {
+                        width: 42px;
+                        height: 45px;
+                    }
+                }
             }
             
             .stars__title {
                 letter-spacing: 2px;
                 height: 58%;
+                font-family: variables.$font-family;
+                min-width: 480px;
                 
-                @include mixins.font-mixin(36px, 54px);
+                @include mixins.font-mixin(36px, 150%);
 
                 @include mixins.desktop-wide {
+                    width: 100%;
+                    min-width: 453px;
                     @include mixins.font-mixin(34px, 51px);
-                    
-
                 }
                 @include mixins.tablet {
+                    min-width: 340px;
+
                     @include mixins.font-mixin(29px, 43px);
                 }
                 @include mixins.mobile {

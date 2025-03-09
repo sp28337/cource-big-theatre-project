@@ -32,33 +32,56 @@
 
     @include mixins.tablet {
       display: block;
-      position: absolute;
-      background: none;
+      padding: 0;
       border: none;
-      fill: variables.$white;
-      margin: 5% 0 0 0;
     }
 
-    @include mixins.mobile {
-      display: block;
-      position: absolute;
-      background: none;
-      border: none;
-      fill: variables.$white;
-      margin: 60px 0 0 10px;
+    .header__open-nav-icon {
+
+      @include mixins.tablet {
+        height: 20px;
+        width: 26px;
+        display: block;
+        position: absolute;
+        background: none;
+        border: none;
+        fill: variables.$white;
+        margin: 5% 0 0 8%;
+      }
+
+      @include mixins.mobile {
+        display: block;
+        position: absolute;
+        background: none;
+        border: none;
+        fill: variables.$white;
+        margin: 60px 0 0 10px;
+      }
     }
   }
 
   .header__close-nav {
     display: none;
+    padding: 0;
+    border: none;
 
     @include mixins.tablet {
       display: block;
-      position: absolute;
-      background: none;
-      border: none;
-      fill: variables.$white;
-      margin: 38px 38px 0 246px;
+    }
+
+    .header__close-nav-icon {
+      
+      @include mixins.tablet {
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        background: none;
+        border: none;
+        fill: variables.$white;
+        margin: 38px 38px 0 246px;
+
+      }
     }
   }
 
@@ -145,74 +168,77 @@
     @include mixins.desktop-wide {
       justify-content: center;
     }
-    .header__title {
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin: 0 0 50px;
-      
-      @include mixins.font-mixin(64px, 87px);
 
+    .header__content-wrp {
+      align-content: center;
+      width: 48.6%;
+      
+      @include mixins.desktop-wide {
+        width: 80%;
+      }
+      
+      @include mixins.tablet {
+        padding: 260px 0 0;
+      }
+      
+      @include mixins.mobile {
+        margin: 33.3% 0 0;
+        padding: 0;
+        width: 100%;
+        flex-direction: column;
+
+        @include mixins.flex-center();
+      }
+
+      .header__title {
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin: 0 0 50px;
+        
+        @include mixins.font-mixin(64px, 87px);
+    
+        @include mixins.mobile {
+          text-align: center;
+        }
+      }
     }
 
+    .header__slider {
+      width: 33.3%;
+      
+      @include mixins.desktop-wide {
+        display: none;
+      }
+
+      .header__slider-wrp {
+        @include mixins.flex-space-between();
+
+        .header__arrow {
+          width: 29.4%;
+          @include mixins.flex-space-between();
+        }
+
+        .header__arrow-icon {
+          width: 36.6%;
+          height: 30px;
+        }
     
+        .header__btn {
+          color: variables.$white;
+          text-transform: uppercase;
+          background: none;
+          border: none;
+          font-family: variables.$font-family-condensed;
+          letter-spacing: 0.15em;
+          
+          @include mixins.font-mixin(18px, 25px);
+
+        }
+      }
+    }
   }
+
   
-  .header__content-wrp {
-    align-content: center;
-    width: 48.6%;
-    
-    @include mixins.desktop-wide {
-      width: 80%;
-    }
-    
-    @include mixins.tablet {
-      padding: 260px 0 0;
-    }
-
-    @include mixins.mobile {
-      margin: 33.3% 0 0;
-      padding: 0;
-      width: 100%;
-
-      flex-direction: column;
-
-      @include mixins.flex-center();
-
-    }
-
-
-  }
-
-  .header__btn-wrp {
-    @include mixins.flex-space-between();
-
-    .header__btn {
-      color: variables.$white;
-      text-transform: uppercase;
-      background: none;
-      border: none;
-      font-family: variables.$font-family-condensed;
-      letter-spacing: 0.1em;
-      
-      @include mixins.font-mixin(18px, 25px);
-
-      &--right {
-        margin-right: 20px;
-      }
-      
-      &--left {
-        margin-left: 20px;
-      }
-    }
-  }
-
-  .header__slider {
-    width: 33.3%;
-
-    @include mixins.desktop-wide {
-      display: none;
-    }
-  }
 
   .header__tel {
     @include mixins.font-mixin($line-height-param: 22px);
