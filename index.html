@@ -11,28 +11,39 @@
 
     <header class="header">
         <div class="container">
-            <button class="header__open-nav" aria-label="Открыть меню">
-                <svg class="header__open-nav-icon">
-                    <use href="dist/img/icons/sprite.svg#open-btn"></use>
-                </svg>
-            </button>
-            <div class="header__nav-wrp header__nav-wrp--open">
-                <button class="header__close-nav">
-                    <svg class="header__close-nav-icon">
-                        <use href="dist/img/icons/sprite.svg#close-btn"></use>
+
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                  <button class="header__open-nav navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Открыть меню">
+                    <svg class="header__open-nav-icon">
+                        <use href="dist/img/icons/sprite.svg#open-btn"></use>
                     </svg>
-                </button>
-                <nav class="header__nav">
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item"><a class="header__nav-link">Главная</a></li>
-                        <li class="header__nav-item"><a class="header__nav-link" href="#">О театре</a></li>
-                        <li class="header__nav-item"><a class="header__nav-link" href="#">Наши постановки</a></li>
-                        <li class="header__nav-item"><a class="header__nav-link" href="#"></a>партнёры театра</li>
-                        <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-                <a class="header__tel" href="tel:+7(999)999-99-99">+7 (999) 999-99-99</a>
-            </div>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <div class="header__nav-wrp header__nav-wrp--open">
+                            <button class="header__close-nav" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false">
+                                <svg class="header__close-nav-icon">
+                                    <use href="dist/img/icons/sprite.svg#close-btn"></use>
+                                </svg>
+                            </button>
+                            <nav class="header__nav">
+                                <ul class="header__nav-list">
+                                    <li class="header__nav-item"><a class="header__nav-link">Главная</a></li>
+                                    <li class="header__nav-item"><a class="header__nav-link" href="#">О театре</a></li>
+                                    <li class="header__nav-item"><a class="header__nav-link" href="#">Наши постановки</a></li>
+                                    <li class="header__nav-item"><a class="header__nav-link" href="#"></a>партнёры театра</li>
+                                    <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
+                                </ul>
+                            </nav>
+                            <a class="header__tel" href="tel:+7(999)999-99-99">+7 (999) 999-99-99</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+
+            
             <div class="header__content">
                 <div class="header__content-wrp">
                     <h1 class="header__title">Большой театр</h1>

@@ -15,7 +15,7 @@
   }
 
   @include mixins.desktop-wide {
-    padding: 50px 0 363px;
+    padding: 3% 0 30%;
   }
 
   @include mixins.tablet {
@@ -27,11 +27,15 @@
     height: 600px;
   }
 
+  .container-fluid {
+    padding: 0;
+  }
+
   .header__open-nav {
-    display: none;
+    // display: none;
 
     @include mixins.tablet {
-      display: block;
+      display: initial;
       padding: 0;
       border: none;
     }
@@ -46,7 +50,7 @@
         background: none;
         border: none;
         fill: variables.$white;
-        margin: 5% 0 0 8%;
+        margin: 5% 0 0 10%;
       }
 
       @include mixins.mobile {
@@ -85,23 +89,28 @@
     }
   }
 
+  .navbar-nav {
+    width: 100%;
+  }
+
   .header__nav-wrp {
-    margin: 0 0 219px;
+    width: 100%;
+    margin: 0 0 17%;
     
     @include mixins.flex-space-between();
 
     @include mixins.desktop-wide {
       flex-direction: column;
-      margin: 0 0 260px;
+      margin: 0 0 30%;
     }
 
     @include mixins.tablet {
-      display: none;
+      display: block;
 
       &--open {
         display: block;
         background-color: variables.$dark-gray;
-        position: absolute;
+        position: fixed;
         height: 100%;
         width: 300px;
         margin: 0;
@@ -112,12 +121,11 @@
       }
 
     @include mixins.mobile {
-      display: none;
     }
   }
   
   .header__nav {
-    width: 83%;
+    width: 70%;
 
     @include mixins.desktop-wide {
       width: initial;
@@ -166,7 +174,12 @@
     @include mixins.flex-space-between();
 
     @include mixins.desktop-wide {
+      display: block;
       justify-content: center;
+    }
+
+    @include mixins.tablet {
+      display: flex;
     }
 
     .header__content-wrp {

@@ -37,9 +37,13 @@ textarea {
 .container {
     width: 80%;
     margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
 
     @include mixins.desktop-wide {
         width: 90%;
         margin: 0 auto;
+        max-width: 720px;
+
     }
 }

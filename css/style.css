@@ -12372,7 +12372,7 @@ textarea.form-control-lg {
 }
 @media (max-width: 1110px) {
   .header {
-    padding: 50px 0 363px;
+    padding: 3% 0 30%;
   }
 }
 @media (max-width: 768px) {
@@ -12386,12 +12386,12 @@ textarea.form-control-lg {
     height: 600px;
   }
 }
-.header .header__open-nav {
-  display: none;
+.header .container-fluid {
+  padding: 0;
 }
 @media (max-width: 768px) {
   .header .header__open-nav {
-    display: block;
+    display: initial;
     padding: 0;
     border: none;
   }
@@ -12405,7 +12405,7 @@ textarea.form-control-lg {
     background: none;
     border: none;
     fill: #FFFFFF;
-    margin: 5% 0 0 8%;
+    margin: 5% 0 0 10%;
   }
 }
 @media (max-width: 576px) {
@@ -12440,25 +12440,29 @@ textarea.form-control-lg {
     margin: 38px 38px 0 246px;
   }
 }
+.header .navbar-nav {
+  width: 100%;
+}
 .header .header__nav-wrp {
-  margin: 0 0 219px;
+  width: 100%;
+  margin: 0 0 17%;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 1110px) {
   .header .header__nav-wrp {
     flex-direction: column;
-    margin: 0 0 260px;
+    margin: 0 0 30%;
   }
 }
 @media (max-width: 768px) {
   .header .header__nav-wrp {
-    display: none;
+    display: block;
   }
   .header .header__nav-wrp--open {
     display: block;
     background-color: #333333;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 300px;
     margin: 0;
@@ -12467,13 +12471,8 @@ textarea.form-control-lg {
     left: 0;
   }
 }
-@media (max-width: 576px) {
-  .header .header__nav-wrp {
-    display: none;
-  }
-}
 .header .header__nav {
-  width: 83%;
+  width: 70%;
 }
 @media (max-width: 1110px) {
   .header .header__nav {
@@ -12525,7 +12524,13 @@ textarea.form-control-lg {
 }
 @media (max-width: 1110px) {
   .header .header__content {
+    display: block;
     justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .header .header__content {
+    display: flex;
   }
 }
 .header .header__content .header__content-wrp {
@@ -13522,11 +13527,14 @@ textarea {
 .container {
   width: 80%;
   margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 @media (max-width: 1110px) {
   .container {
     width: 90%;
     margin: 0 auto;
+    max-width: 720px;
   }
 }
 
