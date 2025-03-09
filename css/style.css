@@ -964,9 +964,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   .stars {
@@ -1023,14 +1020,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-left: 130px;
-}
-@media (max-width: 1110px) {
-  .stars .stars__wrp .stars__content-wrp {
-    width: 70%;
-    margin: 0px;
-    padding-left: 75px;
-  }
+  padding-left: 10%;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .stars .stars__wrp .stars__content-wrp {
@@ -1046,29 +1037,19 @@
 }
 .stars .stars__wrp .stars__content-wrp .stars__img {
   padding: 7px 0 0 0;
-  width: 445px;
-  margin: 0 0 60px;
+  width: 70%;
+  margin: 0 0 7%;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 1110px) {
   .stars .stars__wrp .stars__content-wrp .stars__img {
-    width: 307px;
-    margin: 0 0 40px;
-  }
-  .stars .stars__wrp .stars__content-wrp .stars__img img:nth-of-type(n+1) {
-    width: 35px;
-    height: 39px;
+    width: 85%;
   }
 }
 @media (max-width: 768px) {
   .stars .stars__wrp .stars__content-wrp .stars__img {
-    margin: 0 0 60px;
     width: 90%;
-  }
-  .stars .stars__wrp .stars__content-wrp .stars__img img:nth-of-type(n+1) {
-    width: 30px;
-    height: 38px;
   }
 }
 @media (max-width: 576px) {
@@ -1076,15 +1057,29 @@
     display: none;
   }
 }
+.stars .stars__wrp .stars__content-wrp .stars__img .stars__img-icon {
+  width: 50px;
+  height: 52px;
+}
+@media (max-width: 1110px) {
+  .stars .stars__wrp .stars__content-wrp .stars__img .stars__img-icon {
+    width: 42px;
+    height: 45px;
+  }
+}
 .stars .stars__wrp .stars__content-wrp .stars__title {
   letter-spacing: 2px;
   height: 58%;
+  font-family: "Open Sans", sans-serif;
+  min-width: 480px;
   font-size: 36px;
-  line-height: 54px;
+  line-height: 150%;
   font-weight: 700;
 }
 @media (max-width: 1110px) {
   .stars .stars__wrp .stars__content-wrp .stars__title {
+    width: 100%;
+    min-width: 453px;
     font-size: 34px;
     line-height: 51px;
     font-weight: 700;
@@ -1092,6 +1087,7 @@
 }
 @media (max-width: 768px) {
   .stars .stars__wrp .stars__content-wrp .stars__title {
+    min-width: 340px;
     font-size: 29px;
     line-height: 43px;
     font-weight: 700;
