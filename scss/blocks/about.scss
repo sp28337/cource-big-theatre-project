@@ -95,6 +95,7 @@
         width: 33.2%;
         height: 323px;
         object-fit: cover;
+        align-content: center;
 
         @include mixins.desktop-wide {
             display: none;

@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
 
     @include mixins.retina {
-        background-image: url("../../dist/img/stars@2x.webp");
+        background-image: url("../img/stars@2x.webp");
     }
 
     @include mixins.desktop-wide {

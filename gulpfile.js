@@ -7,12 +7,12 @@ const svgSprite = require('gulp-svg-sprite');
 function css() {
     return src("./scss/style.scss")
     .pipe(sass().on("error", sass.logError))
-        .pipe(dest("./css"));
+        .pipe(dest("./dist/css"));
 }
 
 function server() {
     browserSync.init({
-        server: {baseDir: "./"}
+        server: {baseDir: "./dist"}
     });
 }
 
@@ -38,13 +38,36 @@ function svg() {
     ).pipe(dest('dist/img/icons'));
 }
 
+function html() {
+    return src("*.html")
+    .pipe(dest("dist"))
+}
+
+function js() {
+    return src("js/*.js")
+    .pipe(dest("dist/js"))
+}
+
+function copyUtils() {
+    return src(["./node_modules/swiper/**/*",
+        "./utils/*",
+    ])
+    .pipe(dest("dist/utils"))
+}
+
+function fontCopy() {
+    return src("fonts/*.{woff,woff2}")
+    .pipe(dest("dist/fonts"))
+}
+
+watch("scss/**/*.{scss, sass}", series(css, reload));
+watch("*.html", series(html, reload));
+watch("js/*.js", series(js, reload));
 
 exports.svg = svg
 exports.css = css;
 exports.server = server;
 exports.webpTask = webpTask;
-exports.start = series(css, server);
 
-watch("scss/**/*.{scss, sass}", series(css, reload));
-watch("*.html", reload);
-watch("js/**/*.js", reload);
+exports.build = series(css, html, webpTask, svg, js, copyUtils, fontCopy)
+exports.start = series(server);

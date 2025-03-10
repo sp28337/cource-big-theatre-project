@@ -20,53 +20,47 @@
         margin: 0 0 50px;
     }
     
-    .footer__contacts-wrp {
         
+    .footer__contacts-list {
+        gap: 3%;
+
         @include mixins.flex-space-between();
         
-        .footer__contacts-list {
-            @include mixins.flex-space-between();
-            @include mixins.desktop-wide{
-                flex-direction: column;
-            }
-                   
-            .footer__contacts-item {
-                font-family: variables.$font-family-condensed;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                
-                @include mixins.font-mixin(21px, 28px);
-                @include mixins.desktop-wide {
-                    @include mixins.font-mixin(16px, 21px);
-                }
+        @include mixins.desktop-wide{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 35px 35px;
 
-                
-                .footer__contacts-item-desc {
-                    font-style: normal;
-                    text-align: end;
-                }
+        }
         
-            }
-
-            &--left {
-                width: 495px;
-
-                @include mixins.desktop-wide{
-                    height: 70px;
-                }
-            }
-            
-            &--right {
-                width: 570px;
                 
-                @include mixins.desktop-wide{
-                    display: flex;
-                    align-items: flex-end;
-                }
-            }    
+        .footer__contacts-item {
+            font-family: variables.$font-family-condensed;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            
+            @include mixins.font-mixin(21px, 28px);
+            @include mixins.desktop-wide {
+                @include mixins.font-mixin(16px, 21px);
+            }
+
+            
+            .footer__contacts-item-desc {
+                font-style: normal;
+                text-align: end;
+            }
+        }
+
+        .footer__contacts-item-3 {
+            @include mixins.desktop-wide {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                margin-left: auto;
+            }
         }
     }
-
 
     .footer__author-desc {
         font-family: variables.$font-family;
