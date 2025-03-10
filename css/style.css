@@ -13243,9 +13243,6 @@ textarea.form-control-lg {
 }
 .staging .staging__list {
   margin: 113px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 @media (max-width: 1110px) {
   .staging .staging__list {
@@ -13268,22 +13265,9 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 33%;
   min-height: 478px;
   padding: 34px 0 0 33px;
   box-sizing: border-box;
-}
-@media (max-width: 1110px) {
-  .staging .staging__list .staging__item {
-    width: 50%;
-    min-height: 476px;
-  }
-}
-@media (max-width: 576px) {
-  .staging .staging__list .staging__item {
-    width: 90%;
-    padding: 40px 0 0 40px;
-  }
 }
 .staging .staging__list .staging__item--building {
   background-image: url("../../dist/img/staging1.webp");
