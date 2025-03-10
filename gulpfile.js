@@ -43,6 +43,11 @@ function html() {
     .pipe(dest("dist"))
 }
 
+function js() {
+    return src("js/*.js")
+    .pipe(dest("dist/js"))
+}
+
 exports.svg = svg
 exports.css = css;
 exports.server = server;
@@ -51,4 +56,4 @@ exports.start = series(css, server);
 
 watch("scss/**/*.{scss, sass}", series(css, reload));
 watch("*.html", series(html, reload));
-watch("js/**/*.js", reload);
+watch("js/*.js", series(js, reload));
