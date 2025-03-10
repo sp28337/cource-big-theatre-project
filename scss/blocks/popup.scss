@@ -2,6 +2,11 @@
 @use "../variables.scss";
 
 
+.modal-dialog {
+    max-width: 100%;
+    margin: 0;
+}
+
 .popup {
     width: 100%;
     position: fixed;
@@ -21,7 +26,6 @@
 
         @include mixins.desktop-wide {
             max-width: 60%;
-            min-height: 55%;
         }
 
         @include mixins.mobile {
@@ -37,6 +41,11 @@
             @include mixins.desktop-wide {
                 padding: 2.6% 3% 8% 89%;
                 margin: 0;
+            }
+
+            .popup__close-btn-icon {
+                width: 29px;
+                height: 28px;
             }
         }
 

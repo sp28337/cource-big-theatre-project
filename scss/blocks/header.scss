@@ -225,17 +225,7 @@
 
       .header__slider-wrp {
         @include mixins.flex-space-between();
-
-        .header__arrow {
-          width: 29.4%;
-          @include mixins.flex-space-between();
-        }
-
-        .header__arrow-icon {
-          width: 36.6%;
-          height: 30px;
-        }
-    
+        
         .header__btn {
           color: variables.$white;
           text-transform: uppercase;

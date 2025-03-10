@@ -64,16 +64,16 @@
                     </div>
                     <div class="header__slider-wrp">
                         <div class="header__arrow header__arrow--left">
-                            <svg class="header__arrow-icon">
+                            <!-- <svg class="header__arrow-icon">
                                 <use href="dist/img/icons/sprite.svg#arrow-left"></use>
-                            </svg>    
+                            </svg>     -->
                             <button type="button" class="header__btn header__btn--left" data-bs-target="#carouselExample" data-bs-slide="prev">пред</button>
                         </div>
                         <div class="header__arrow header__arrow--right">
                             <button type="button" class="header__btn header__btn--right" data-bs-target="#carouselExample" data-bs-slide="next">след</button>
-                            <svg class="header__arrow-icon">
+                            <!-- <svg class="header__arrow-icon">
                                 <use href="dist/img/icons/sprite.svg#arrow-right"></use>
-                            </svg>   
+                            </svg>    -->
 
                         </div>        
                     </div>
@@ -164,21 +164,31 @@
         <section class="partners container">
             <h2 class="partners__title section-title"><span class="section-title-orange">партнеры</span> театра</h2>
             <ul class="partners__list">
-                <li class="partners__item">
-                    <img src="../img/logo.png" alt="partner">
+                <li class="partners__item partners__item-1">
+                     <svg class="partners__item-icon">
+                         <use href="dist/img/icons/sprite.svg#logo"></use>
+                     </svg>
                 </li>
-                <li class="partners__item">
-                    <img src="../img/logo.png" alt="partner">
+                <li class="partners__item partners__item-2">
+                     <svg class="partners__item-icon">
+                         <use href="dist/img/icons/sprite.svg#logo"></use>
+                     </svg>
                 </li>
-                <li class="partners__item">
-                    <img src="../img/logo.png" alt="partner">
+                <li class="partners__item partners__item-3">
+                     <svg class="partners__item-icon">
+                         <use href="dist/img/icons/sprite.svg#logo"></use>
+                     </svg>
                 </li>
-                <li class="partners__item">
-                    <img src="../img/logo.png" alt="partner">
+                <li class="partners__item partners__item-4">
+                     <svg class="partners__item-icon">
+                         <use href="dist/img/icons/sprite.svg#logo"></use>
+                     </svg>
                 </li>
+
+
                 </ul>
             <div class="partners__btn-wrp">
-                <button class="partners__btn">Стать меценатом</button>
+                <button class="partners__btn" data-bs-target="#formModal" data-bs-toggle="modal">Стать меценатом</button>
             </div>
         </section>
     </main>
@@ -213,42 +223,49 @@
         </div>
     </footer>
 
-    <div class="popup popup--hidden">
-        <div class="popup__wrp">
-            <button class="popup__close-btn" type="button">
-                <svg width="31" height="29" viewBox="0 0 31 29" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30.25 2.74375L27.6688 0.25L15.5 12.0063L3.33125 0.25L0.75 2.74375L12.9188 14.5L0.75 26.2563L3.33125 28.75L15.5 16.9937L27.6688 28.75L30.25 26.2563L18.0812 14.5L30.25 2.74375Z" fill="white"/>
-                </svg>
-            </button>
-            <form class="popup__form" action="#">
-                
-                <label class="popup__label">
-                    <input class="popup__input-field" type="text" placeholder="Имя">
-                </label>
-                <span class="visually-hidden">имя</span>
-                <label class="popup__label">
-                    <input class="popup__input-field popup__input-field--tel" type="tel" placeholder="Телефон">
-                </label>
-                <span class="visually-hidden">телефон</span>
-                <label class="popup__label">
-                    <input class="popup__input-field popup__input-field--company" type="text" placeholder="Компания">
-                </label>
-                <span class="visually-hidden">компания</span>
-                <label class="popup__label">
-                    <input class="popup__input-field" type="email" placeholder="E-mail">
-                    <span class="visually-hidden">e-mail</span>
-                </label>
-                <label class="popup__label popup__label--textarea">
-                    <textarea class="popup__input-field popup__input-field--textarea" placeholder="Сообщение"></textarea>
-                    <span class="visually-hidden">сообщение</span>
-                </label>
 
-                <p class="popup__hint">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
-                <button class="popup__button btn">отправить</button>
+    <div class="modal fade" id="formModal" aria-hidden="true" aria-labelledby="formModal" tabindex="-1">
+        <div class="popup modal-dialog">
+            <div class="popup__wrp">
+                <button class="popup__close-btn" data-bs-dismiss="modal" aria-label="Close" type="button">
+                    <svg class="popup__close-btn-icon">
+                        <use href="dist/img/icons/sprite.svg#close-btn"></use>
+                    </svg>
+                </button>
+                <form class="popup__form" action="#">
+                    
+                    <label class="popup__label">
+                        <input class="popup__input-field" type="text" placeholder="Имя">
+                    </label>
+                    <span class="visually-hidden">имя</span>
+                    <label class="popup__label">
+                        <input class="popup__input-field popup__input-field--tel" type="tel" placeholder="Телефон">
+                    </label>
+                    <span class="visually-hidden">телефон</span>
+                    <label class="popup__label">
+                        <input class="popup__input-field popup__input-field--company" type="text" placeholder="Компания">
+                    </label>
+                    <span class="visually-hidden">компания</span>
+                    <label class="popup__label">
+                        <input class="popup__input-field" type="email" placeholder="E-mail">
+                        <span class="visually-hidden">e-mail</span>
+                    </label>
+                    <label class="popup__label popup__label--textarea">
+                        <textarea class="popup__input-field popup__input-field--textarea" placeholder="Сообщение"></textarea>
+                        <span class="visually-hidden">сообщение</span>
+                    </label>
 
-            </form>
+                    <p class="popup__hint">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
+                    <button class="popup__button btn">отправить</button>
+
+                </form>
+            </div>
         </div>
     </div>
+
+
     <script src="./js/bootstrap.bundle.js"></script>
+
+
 </body>
 </html>
