@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+<script src="./js/script.js" type="module"></script>
+<script src="./js/bootstrap.bundle.js" type="module"></script>
+<script src="./node_modules/swiper/swiper-bundle.mjs" type="module"></script>
 <body>
 
 
@@ -106,19 +109,21 @@
 
         <section class="staging container">
             <h2 class="staging__title section-title"><span class="section-title-orange">наши</span> постановки</h2>
-            <div class="staging__list">
-                <div class="staging__item staging__item--building">
-                    <h3 class="staging__item-title">ОСКАР <br>2020</h3></div>
-                <div class="staging__item staging__item--border">
-                    <h3 class="staging__item-title staging__item-title--2">золотой<br>грамофон</h3></div>
-                <div class="staging__item staging__item--hall">
-                    <h3 class="staging__item-title">золотой<br>грамофон</h3></div>
-                <div class="staging__item staging__item--building">
-                    <h3 class="staging__item-title">ОСКАР <br>2020</h3></div>
-                <div class="staging__item staging__item--border">
-                    <h3 class="staging__item-title staging__item-title--2">золотой<br>грамофон</h3></div>
-                <div class="staging__item staging__item--hall">
-                    <h3 class="staging__item-title">золотой<br>грамофон</h3></div>
+            <div class="staging__list swiper">
+                <div class="swiper-wrapper">
+                    <div class="staging__item staging__item--building swiper-slide">
+                        <h3 class="staging__item-title">ОСКАР <br>2020</h3></div>
+                    <div class="staging__item staging__item--border swiper-slide">
+                        <h3 class="staging__item-title staging__item-title--2">золотой<br>грамофон</h3></div>
+                    <div class="staging__item staging__item--hall swiper-slide">
+                        <h3 class="staging__item-title">золотой<br>грамофон</h3></div>
+                    <div class="staging__item staging__item--building swiper-slide">
+                        <h3 class="staging__item-title">ОСКАР <br>2020</h3></div>
+                    <div class="staging__item staging__item--border swiper-slide">
+                        <h3 class="staging__item-title staging__item-title--2">золотой<br>грамофон</h3></div>
+                    <div class="staging__item staging__item--hall swiper-slide">
+                        <h3 class="staging__item-title">золотой<br>грамофон</h3></div>
+                </div>
             </div>
         </section>
 
@@ -260,9 +265,7 @@
     </div>
 
 
-    <script src="./js/script.js"></script>
-    <script src="./js/bootstrap.bundle.js"></script>
-    <script src="./node_modules/swiper/swiper-bundle.js"></script>
+   
 
 </body>
 </html>
