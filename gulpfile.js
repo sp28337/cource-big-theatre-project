@@ -47,3 +47,4 @@ exports.start = series(css, server);
 
 watch("scss/**/*.{scss, sass}", series(css, reload));
 watch("*.html", reload);
+watch("js/**/*.js", reload);
