@@ -12,7 +12,7 @@ function css() {
 
 function server() {
     browserSync.init({
-        server: {baseDir: "./"}
+        server: {baseDir: "./dist"}
     });
 }
 
@@ -50,5 +50,5 @@ exports.webpTask = webpTask;
 exports.start = series(css, server);
 
 watch("scss/**/*.{scss, sass}", series(css, reload));
-watch("*.html", reload);
+watch("*.html", series(html, reload));
 watch("js/**/*.js", reload);
