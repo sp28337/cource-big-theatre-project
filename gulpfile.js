@@ -58,6 +58,11 @@ function copyUtils() {
     .pipe(dest("dist/utils"))
 }
 
+function fontCopy() {
+    return src("fonts/*.{woff,woff2}")
+    .pipe(dest("dist/fonts"))
+}
+
 exports.svg = svg
 exports.css = css;
 exports.server = server;
