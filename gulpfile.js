@@ -7,7 +7,7 @@ const svgSprite = require('gulp-svg-sprite');
 function css() {
     return src("./scss/style.scss")
     .pipe(sass().on("error", sass.logError))
-        .pipe(dest("./css"));
+        .pipe(dest("./dist/css"));
 }
 
 function server() {
@@ -63,12 +63,14 @@ function fontCopy() {
     .pipe(dest("dist/fonts"))
 }
 
+watch("scss/**/*.{scss, sass}", series(css, reload));
+watch("*.html", series(html, reload));
+watch("js/*.js", series(js, reload));
+
 exports.svg = svg
 exports.css = css;
 exports.server = server;
 exports.webpTask = webpTask;
-exports.start = series(css, server);
 
-watch("scss/**/*.{scss, sass}", series(css, reload));
-watch("*.html", series(html, reload));
-watch("js/*.js", series(js, reload));
+exports.build = series(css, html, webpTask, js, copyUtils, fontCopy)
+exports.start = series(server);
