@@ -13,13 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/sp28337/cource-big-theatre-project.git"
   },
-  "author": "",
+  "author": "sp28337",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sp28337/cource-big-theatre-project/issues"
   },
   "homepage": "https://github.com/sp28337/cource-big-theatre-project#readme",
-  "description": "",
+  "description": "first project",
   "devDependencies": {
     "browser-sync": "^3.0.3",
     "gulp": "^4.0.2",
