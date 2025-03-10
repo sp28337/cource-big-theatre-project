@@ -49,11 +49,8 @@ function js() {
 }
 
 function copyUtils() {
-    return src(["../node_modules/swiper/**/*",
-        "./js/bootstrap.bundle.js",
-        "./css/bootstrap.css"
-
-    // Файлы bootstrap если подключали их локально
+    return src(["./node_modules/swiper/**/*",
+        "./utils/*",
     ])
     .pipe(dest("dist/utils"))
 }
@@ -72,5 +69,5 @@ exports.css = css;
 exports.server = server;
 exports.webpTask = webpTask;
 
-exports.build = series(css, html, webpTask, js, copyUtils, fontCopy)
+exports.build = series(css, html, webpTask, svg, js, copyUtils, fontCopy)
 exports.start = series(server);

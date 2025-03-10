@@ -5,13 +5,13 @@
   background-color: variables.$gray-background;
   padding: 50px 0  179px;
   position: relative;
-  background-image: url("../../dist/img/header-background.webp");
+  background-image: url("../img/header-background.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   @include mixins.retina {
-    background-image: url("../../dist/img/header-background@2x.webp");
+    background-image: url("../img/header-background@2x.webp");
   }
 
   @include mixins.desktop-wide {
