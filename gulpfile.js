@@ -48,6 +48,16 @@ function js() {
     .pipe(dest("dist/js"))
 }
 
+function copyUtils() {
+    return src(["../node_modules/swiper/**/*",
+        "./js/bootstrap.bundle.js",
+        "./css/bootstrap.css"
+
+    // Файлы bootstrap если подключали их локально
+    ])
+    .pipe(dest("dist/utils"))
+}
+
 exports.svg = svg
 exports.css = css;
 exports.server = server;
