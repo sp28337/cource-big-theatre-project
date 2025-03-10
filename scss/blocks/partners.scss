@@ -18,44 +18,54 @@
     }
 
     .partners__list {
+        
         margin: 60px 0 0;
         
         @include mixins.flex-space-between();
+        
         @include mixins.desktop-wide {
-            flex-wrap: wrap;
-            width: 478px;
+            display: grid;
+            grid-template-columns: 35% 35%;
+            justify-content: space-evenly;
             margin-left: auto;
             margin-right: auto;
         }
+
         @include mixins.mobile {
-            display: block;
-            text-align: center;
-            width: initial;
 
-            .partners__item:nth-of-type(n+1) {
-                margin-bottom: 25px;
-            }
+            flex-direction: column;
 
-            .partners__item:nth-of-type(4n) {
-                margin-bottom: 0px;
-            }
+            @include mixins.flex-space-between();
+    
         }
         
         .partners__item {
-            @include mixins.mobile {
-                margin: 0px;
-                
-                img {
-                    width: 69%;
-                }
+            width: 19.3%;
 
+            @include mixins.desktop-wide {
+                width: 100%;
             }
-            .partners__item:nth-of-type(n+2) {
-                margin-left: 78px;
+            
+            @include mixins.mobile {
+                margin: 0 0 5%;
+                
+                
             }
-    
-            .partners__item:nth-of-type(3n) {
-                margin-left: 0px;
+            
+            
+            .partners__item-icon {
+                width: 100%;
+                
+                @include mixins.desktop-wide {
+                    height: 70%;
+                }
+            }
+        }
+        
+        .partners__item-4 {
+            
+            @include mixins.mobile {
+                margin: 0;
             }
         }
     }
@@ -77,6 +87,10 @@
 
         @include mixins.font-mixin(18px, 25px);
         @include mixins.flex-center();
+
+        @include mixins.desktop-wide {
+            margin: 15% 0 0;
+        }
 
         @include mixins.tablet {
             width: 326px;
