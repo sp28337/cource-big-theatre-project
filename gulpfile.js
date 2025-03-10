@@ -38,6 +38,10 @@ function svg() {
     ).pipe(dest('dist/img/icons'));
 }
 
+function html() {
+    return src("*.html")
+    .pipe(dest("dist"))
+}
 
 exports.svg = svg
 exports.css = css;
